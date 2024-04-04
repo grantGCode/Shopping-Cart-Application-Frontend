@@ -1,5 +1,6 @@
 import {useState} from 'react'
-import {Container, Navbar, Modal, Col, Row, Button, ToastContainer} from 'react-bootstrap'
+import { NavbarContainer, ButtonCart, TitleContainer } from './styles/Container.styled';
+import { Modal, Col, Button, ToastContainer} from 'react-bootstrap'
 import { toast } from 'react-toastify';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCartShopping } from '@fortawesome/free-solid-svg-icons'
@@ -43,84 +44,69 @@ export default function NavBar() {
   };
   
 
+
   return (
     <div> 
-    <Navbar className='Nav-BG'>{/*Nav*/}
-        <Container>
-            <Row className="w-100">
-              <Col className='Brand-Name'>{/*Place Holder Website Name */}
-                <h1 className='Title-U'>U</h1>
-                <h1 className='Title-S'>S</h1> 
-                <h1 className='Title-Shopper'>Shopper</h1> 
-              </Col>
-              <Col className="d-flex justify-content-end">
-                <Button  
-                    size='lg'
-                    variant='primary' 
-                    className= 'Check-Out-Button'
-                    type='button' 
-                    onClick={handleShow}
-                  >
-                    <p className='my-0 mx-0'>
-                      <FontAwesomeIcon icon={faCartShopping} /> Your Cart Has:
-                    </p> 
-                    <p className='my-0 mx-0'>
-                      {cartItemCount} Items
-                    </p>
-                  </Button>
-                </Col>
-              </Row>
-
-          
-          <div className='display-modal'>
-            <Modal align='center' className='Modal-Window' show={show} onHide={handleClose}>
-              
-                <div className='Header'>
-                  <Modal.Header className='Header'>
-                    <Modal.Title className='Shopping-Cart-Title' >Your Shopping Cart</Modal.Title>
-                    <Button 
-                      type='button' 
-                      className='Close-Modal' 
-                      variant="danger" 
-                      onClick={handleClose}
-                     >X
-                    </Button>
-                  </Modal.Header>
-                </div>  
-                   
-                <div className='body'>
-                  <Modal.Body >
-                    {Items.length === 0 ? (
-                      <p>There are no items in your shopping cart at this time.</p>
-                      ) : Items.map((item) => 
-                          (
-                            <Col align='center' > 
-                              <ItemCard                   
-                                className="border border-primary"
-                                key={Items.id}
-                                item={item}
-                              />  
-                            </Col>
-                          ))
-                        }
-                    <h2 className='Total'>{`Total: $${getTotalCost()}`}</h2>
-                    <Button 
-                      className='btn mt-2'
-                      variant='success'
-                      onClick={() => {
-                          toast.success('Possessing your order.');
-                          buyCartContent();
-                          //redirect to Stripe checkout session.url
-                        }}
-                    >Purchase Items
-                    </Button>
-                  </Modal.Body>
-                </div>
-            </Modal>
-          </div>
-        </Container>  
-    </Navbar>
-    <ToastContainer />
+      <NavbarContainer>        
+        <TitleContainer>US Shopper</TitleContainer>
+          <ButtonCart  
+            type='button' 
+            onClick={handleShow}
+          >
+            <h5 className='my-0 mx-0'> 
+              {'Your Cart '} 
+              <FontAwesomeIcon icon={faCartShopping} /> 
+              {`       (${cartItemCount})`}
+            </h5> 
+          </ButtonCart>            
+            <div className='display-modal'>
+              <Modal align='center' className='Modal-Window' show={show} onHide={handleClose}>
+                
+                  <div className='Header'>
+                    <Modal.Header className='Header'>
+                      <Modal.Title className='Shopping-Cart-Title' >Your Shopping Cart</Modal.Title>
+                      <Button 
+                        type='button' 
+                        className='Close-Modal' 
+                        variant="danger" 
+                        onClick={handleClose}
+                      >X
+                      </Button>
+                    </Modal.Header>
+                  </div>  
+                    
+                  <div className='body'>
+                    <Modal.Body >
+                      {Items.length === 0 ? (
+                        <p>There are no items in your shopping cart at this time.</p>
+                        ) : Items.map((item) => 
+                            (
+                              <Col align='center' > 
+                                <ItemCard                   
+                                  className="border border-primary"
+                                  key={Items.id}
+                                  item={item}
+                                />  
+                              </Col>
+                            ))
+                          }
+                      <h2 className='Total'>{`Total: $${getTotalCost()}`}</h2>
+                      <Button 
+                        className='btn mt-2'
+                        variant='success'
+                        onClick={() => {
+                            toast.success('Possessing your order.');
+                            buyCartContent();
+                            //redirect to Stripe checkout session.url
+                          }}
+                      >Purchase Items
+                      </Button>
+                    </Modal.Body>
+                  </div>
+              </Modal>
+            </div> 
+      </NavbarContainer>
+      <ToastContainer />
     </div>
   )
 }
