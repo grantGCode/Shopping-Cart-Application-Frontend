@@ -1,0 +1,45 @@
+
+
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+
+.Brand-Name {
+  display: flex;
+  justify-content: left;
+}
+
+.Brand-Name .Shopper {
+  padding-left: 1rem;
+}
+
+.Nav-BG {
+  background-color: #E0E0E0
+}
+
+
+.Title-U {
+  color: red;
+}
+
+.Title-S{
+  color: white;
+}
+
+.Title-Shopper {
+  display: flex;
+  padding-left: 1rem;
+  color: navy;
+}
