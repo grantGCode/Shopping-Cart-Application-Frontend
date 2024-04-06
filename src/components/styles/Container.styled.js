@@ -12,15 +12,36 @@ const size = {
     desktop: `(min-width: ${size.desktop})`,
   };
 
-export const TitleContainer = styled.h1`
-color: white;
+  export const TitleContainer = styled.div`
+  color: white;
 
-@media ${device.mobile} { 
-    max-width: 500px;
-    padding-left: 5px;
-    font-size: 1.5em;
-    text-align: end;
-  };
+  h1,
+  p {
+    margin: 0;
+  }
+
+  h1 {
+    display: flex;
+    justify-content: start;
+    font-size: 4em;
+    text-align: center;
+  }
+
+  p {
+    display: flex;
+    justify-content: start;
+    font-size: 1em;
+    font-style: italic;
+  }
+
+  @media ${device.mobile} {
+    h1, p {
+      max-width: 500px;
+      padding-left: 5px;
+      font-size: 1.5em;
+      text-align: end;
+    }
+  }
 `
 
 

@@ -48,7 +48,12 @@ export default function NavBar() {
   return (
     <div> 
       <NavbarContainer>        
-        <TitleContainer>US Shopper</TitleContainer>
+        <TitleContainer>
+          <h1>S. S. S. C.</h1>
+          <p>
+            {"(Secure Swift Shopper's Cart)"}
+          </p>
+        </TitleContainer>
           <ButtonCart  
             type='button' 
             onClick={handleShow}
