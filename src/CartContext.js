@@ -1,5 +1,5 @@
 import { createContext, useContext, useState } from "react";
-import { products, getProductData } from "./productStore";
+import { getProductData } from "./productStore";
 import { toast } from 'react-toastify'
 export const ShoppingCartContext = createContext(
   { 
@@ -17,7 +17,7 @@ export const ShoppingCartContext = createContext(
     const [Items, setItems] = useState([]); 
     //displayed count of total products in the cart on Stor.jsx
     const [cartItemCount, setCartItemCount] = useState(0);
-    const [TotalCost, setTotalCost] = useState(0);  
+    const [TotalCost] = useState(0);  
     
     const getProductQuantity = (quantity) => { 
       //Line above Passing in param of the quantity of specific single product in cart
@@ -104,6 +104,7 @@ export const ShoppingCartContext = createContext(
       Items.map((item)=>{
           const productData = getProductData(item.id);
           totalCost += (item.quantity * productData.cost);
+          return totalCost
       })
       return totalCost.toFixed(2);
     };  
@@ -127,7 +128,7 @@ export const ShoppingCartContext = createContext(
     //Delete all products in cart 
     const purgeShoppingCart = () => {
       
-      return setItems([]),
+      setItems([])
       setCartItemCount(0)  
     }
   
