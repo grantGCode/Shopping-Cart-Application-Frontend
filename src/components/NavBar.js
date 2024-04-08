@@ -23,7 +23,7 @@ export default function NavBar() {
         },
         body: JSON.stringify(Items)
       });
-  
+  git 
       //redirect after response
       if (response.ok) {
       const responseData = await response.json();
@@ -108,9 +108,9 @@ export default function NavBar() {
                       className='btn mt-2'
                       variant='success'
                       onClick={() => {
-                          toast.success('Possessing your order.');
-                          buyCartContent();
-                        }}
+                        toast.success('Possessing your order.');
+                        buyCartContent();
+                      }}
                     >Purchase Items
                     </Button>
                   </Modal.Body>
