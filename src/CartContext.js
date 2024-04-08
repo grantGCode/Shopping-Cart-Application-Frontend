@@ -67,21 +67,21 @@ export const ShoppingCartContext = createContext(
     // remove one product from shopping cart
     const removeOneItem = (product) => {
       // check quantity of existing item
-  Items.forEach((item) => {
-    const currentQuantity = getProductQuantity(item.quantity)
+      Items.forEach((item) => {
+        const currentQuantity = getProductQuantity(item.quantity)
     
-    // if quantity is = 1 delete from cart
-    if (currentQuantity === 1 && item.id === product.id) {
-      updateProductInCartCount(false);
-      deleteFromCart(item.id);
-      // if quantity > 1 the item quantity will be -= by 1
-    } else if (currentQuantity > 1 && item.id === product.id) {
-      updateProductInCartCount(false);
-      // Update the quantity of the item in the cart
-      item.quantity -= 1;
+        // if quantity is = 1 delete from cart
+        if (currentQuantity === 1 && item.id === product.id) {
+          updateProductInCartCount(false);
+          deleteFromCart(item.id);
+          // if quantity > 1 the item quantity will be -= by 1
+        } else if (currentQuantity > 1 && item.id === product.id) {
+          updateProductInCartCount(false);
+          // Update the quantity of the item in the cart
+          item.quantity -= 1;
+        }
+      });
     }
-  });
-}
     
     //remove a product from the shopping cart
     const deleteFromCart = (itemToDelete) => {
