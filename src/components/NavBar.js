@@ -23,7 +23,7 @@ export default function NavBar() {
         },
         body: JSON.stringify(Items)
       });
-  git 
+
       //redirect after response
       if (response.ok) {
       const responseData = await response.json();
