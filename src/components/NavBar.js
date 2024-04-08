@@ -100,9 +100,8 @@ export default function NavBar() {
                         className='btn mt-2'
                         variant='success'
                         onClick={() => {
-                            toast.success('Possessing your order.');
-                            buyCartContent();
-                            //redirect to Stripe checkout session.url
+                          toast.success('Possessing your order.');
+                          buyCartContent();
                           }}
                       >Purchase Items
                       </Button>
