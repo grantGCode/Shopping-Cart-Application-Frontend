@@ -1,0 +1,83 @@
+import styled from "styled-components";
+
+const size = {
+    mobile:'425px',
+    laptop: '1024px',
+    desktop: '2560px'
+}
+
+export const device = {
+    mobile: `(min-width: ${size.mobile})`,
+    laptop: `(min-width: ${size.laptop})`,
+    desktop: `(min-width: ${size.desktop})`,
+};
+
+export const ProductsListContainer =styled.div`
+  display: flex;    
+  flex-wrap: wrap;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  
+    @media ${device.mobile} { 
+        flex-direction: row;
+        justify-content: center;
+    
+        li {
+            margin: 14px;
+            height: 450px;
+            list-style-type: none;
+        };
+    }
+`;
+export const ListedProductCard = styled.div`    
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 25px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+`;
+
+
+export const ProductImage = styled.img`
+    display: flex;
+    justify-content: center;
+    Max-width: 130px;
+    Height: auto;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+`;
+
+export const Forum = styled.div`
+    display: flex;
+    flex-direction: column;
+`;
+
+export const InfoContainer = styled.div`
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    padding-top: 20px
+`;
+
+export const ProductTitle = styled.h2`
+
+`;
+export const ProductPrice = styled.h1`
+
+`;
+export const ButtonContainer = styled.div`
+    display: flex;
+    flex-direction: column;
+
+`;
+
+export const Button = styled.button`
+    max-width: 140px;
+    height: 35px;
+    margin-top: 100;
+    margin-bottom: 0;
+    border-radius: 8px;
+    font-weight: bold;
+    color: white;
+    background: linear-gradient(to bottom right, blue, purple)
+`;

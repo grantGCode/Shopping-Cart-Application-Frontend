@@ -1,8 +1,12 @@
+/* Components data, and Contexts */
 import Navbar from '../components/NavBar.js'
-import { products} from '../productStore.js'
-import {Button} from 'react-bootstrap'
 import ProductCard from '../components/ProductCard.js'
+import { products } from '../productStore.js'
 import { useShoppingCartContext } from '../CartContext.js'
+/* Styled Components */
+import { RemoveButton } from '../components/styles/Container.styled.js'
+import { ProductsListContainer } from '../components/styles/ProductCard.styled.js'
+
  
 
 function Store() {
@@ -11,23 +15,21 @@ function Store() {
 
   return (
     <>
-      <Navbar />
-        <div>
+        <ProductsListContainer>
           {products.map((product) => (
-            <div key={product.id}>
+            <li key={product.id}>
               <ProductCard
                 product={product} // Passing individual product as prop
               />
-            </div>
+            </li>
           ))};
-        </div>
-          <Button
-            size='lg'
-            variant="danger" 
+        </ProductsListContainer>
+          <RemoveButton 
             onClick={purgeShoppingCart}
           >
             Remove All From Cart
-          </Button>
+          </RemoveButton>
+          <Navbar />
     </>
   )
 }
