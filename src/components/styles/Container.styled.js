@@ -13,57 +13,93 @@ const size = {
   };
 
   export const TitleContainer = styled.div`
-  color: white;
-
-  h1,
-  p {
-    margin: 0;
-  }
-
-  h1 {
-    display: flex;
-    justify-content: start;
-    font-size: 4em;
-    text-align: center;
-  }
-
-  p {
-    display: flex;
-    justify-content: start;
-    font-size: 1em;
-    font-style: italic;
-  }
-
-  @media ${device.mobile} {
-    h1, p {
-      max-width: 500px;
-      padding-left: 5px;
-      font-size: 1.5em;
-      text-align: end;
+    @media ${device.mobile} {
+      display: none;
     }
-  }
+ 
+    @media ${device.laptop} { 
+      display: block;
+      color: white;
+
+      h1, p {
+        margin: 0;
+      }
+
+      h1 {
+        display: flex;
+        justify-content: start;
+        font-size: 4em;
+        text-align: center;
+      }
+
+      p {
+        display: flex;
+        justify-content: start;
+        font-size: 1em;
+        font-style: italic;
+      }
+
+        h1, p {
+          max-width: 500px;
+          padding-left: 5px;
+          font-size: 1.5em;
+          text-align: end;
+    }
+
+      
+    @media ${device.desktop} {
+      color: white;
+
+      h1,
+      p {
+        margin: 0;
+      }
+    
+      h1 {
+        display: flex;
+        justify-content: start;
+        font-size: 4em;
+        text-align: center;
+      }
+    
+      p {
+        display: flex;
+        justify-content: start;
+        font-size: 1em;
+        font-style: italic;
+      }
+    
+        h1, p {
+          max-width: 500px;
+          padding-left: 5px;
+          font-size: 1.5em;
+          text-align: end;
+        }
+    }
+  
 `;
 
 export const NavbarContainer = styled.nav`
-    position: fixed;
-    background-color: rgba(195, 195, 195, 0.5);
-    display: flex;
-    justify-content: space-between;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
-    
-    @media ${device.mobile} { 
-        max-width: 500px;
-        padding: 8px
+  display: flex;
+  justify-content: space-between;
+  background-color: rgba(195, 195, 195, 0.5);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
 
-      }
+  @media ${device.mobile} { 
+    max-width: 500px;
+    position: fixed;
+    bottom: 0;
+  }
     
-    @media ${device.laptop} { 
-        max-width: 800px;
-      }
+  @media ${device.laptop} { 
+    max-width: auto;
+    position: fixed;
+  }
     
-      @media ${device.desktop} {
-        max-width: 1400px;
-      }
+  @media ${device.desktop} {
+    max-width: 1400px;
+    position: fixed;
+  }
 `;
 
 export const ButtonCart = styled.button`

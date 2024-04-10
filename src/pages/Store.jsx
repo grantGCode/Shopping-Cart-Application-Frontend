@@ -15,21 +15,21 @@ function Store() {
 
   return (
     <>
-        <ProductsListContainer>
-          {products.map((product) => (
-            <li key={product.id}>
-              <ProductCard
-                product={product} // Passing individual product as prop
-              />
-            </li>
-          ))};
-        </ProductsListContainer>
-          <RemoveButton 
-            onClick={purgeShoppingCart}
-          >
-            Remove All From Cart
-          </RemoveButton>
-          <Navbar />
+      <Navbar />
+      <ProductsListContainer>
+        {products.map((product) => (
+          <li key={product.id}>
+            <ProductCard
+              product={product} // Passing individual product as prop
+            />
+          </li>
+        ))};
+      </ProductsListContainer>
+        <RemoveButton 
+          onClick={purgeShoppingCart}
+      >
+        Remove All From Cart
+      </RemoveButton>
     </>
   )
 }
