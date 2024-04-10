@@ -61,14 +61,14 @@ export const InfoContainer = styled.div`
 `;
 
 export const ProductTitle = styled.h2`
-    font-family: "Titillium Web", sans-serif;
-    font-weight: 400;
+    font-family: "Prompt", sans-serif;
+    font-weight: 600;
     font-style: normal;
 `;
 export const ProductPrice = styled.h1`
-    font-family: "Titillium Web", sans-serif;
-    font-weight: 600;
-    font-style: normal;
+font-family: "Prompt", sans-serif;
+font-weight: 700;
+font-style: normal;
 `;
 export const ButtonContainer = styled.div`
     display: flex;
@@ -79,10 +79,11 @@ export const ButtonContainer = styled.div`
 export const Button = styled.button`
     max-width: 140px;
     height: 35px;
-    margin-top: 100;
-    margin-bottom: 0;
+    margin-bottom: 15px;
     border-radius: 8px;
-    font-weight: bold;
+    font-family: "Prompt", sans-serif;
+    font-weight: 700;
+    font-style: normal;    
     color: white;
     background: linear-gradient(to bottom right, blue, purple)
 `;
