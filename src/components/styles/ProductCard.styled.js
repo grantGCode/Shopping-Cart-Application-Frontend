@@ -16,17 +16,19 @@ export const device = {
 export const ProductsListContainer =styled.div`
   display: flex;    
   flex-wrap: wrap;
-  background-color: #fff;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  background-color: #f0f0f0;
+  padding-top: 50px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
   
-    @media ${device.mobile} { np
-        flex-direction: row;
-        justify-content: center;
+  @media ${device.mobile} {
+    flex-direction: row;
+    justify-content: center;
     
-        li {
-            margin: 10px;
-            height: 450px;
-            list-style-type: none;
+    li {
+        margin: 10px;
+        height: 450px;
+        list-style-type: none;
+        margin-bottom: 70px
         };
     }
 `;
@@ -66,9 +68,9 @@ export const ProductTitle = styled.h2`
     font-style: normal;
 `;
 export const ProductPrice = styled.h1`
-font-family: "Prompt", sans-serif;
-font-weight: 700;
-font-style: normal;
+    font-family: "Prompt", sans-serif;
+    font-weight: 700;
+    font-style: normal;
 `;
 export const ButtonContainer = styled.div`
     display: flex;
@@ -77,7 +79,7 @@ export const ButtonContainer = styled.div`
 `;
 
 export const Button = styled.button`
-    max-width: 140px;
+    max-width: 90px;
     height: 35px;
     margin-bottom: 15px;
     border-radius: 8px;
@@ -85,5 +87,10 @@ export const Button = styled.button`
     font-weight: 700;
     font-style: normal;    
     color: white;
-    background: linear-gradient(to bottom right, blue, purple)
+background: linear-gradient(to bottom right, blue, purple);
+
+    &:hover {
+        color: rgba(191, 194, 195); 
+        background: linear-gradient(to top left, blue, purple); /* Change the background color on hover */
+    }
 `;
