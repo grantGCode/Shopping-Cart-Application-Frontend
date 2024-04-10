@@ -7,7 +7,6 @@ import { faCartShopping } from '@fortawesome/free-solid-svg-icons'
 import { useShoppingCartContext } from '../CartContext';
 import ItemCard from './ItemCard'
 
-
 export default function NavBar() {
   const [show, setShow] = useState(false);
   const handleClose = () => setShow(false);
@@ -43,8 +42,6 @@ export default function NavBar() {
     }
   };
   
-
-
   return (
     <div> 
       <NavbarContainer>        

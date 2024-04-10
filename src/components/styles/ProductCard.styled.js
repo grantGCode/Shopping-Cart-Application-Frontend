@@ -1,5 +1,6 @@
 import styled from "styled-components";
 
+
 const size = {
     mobile:'425px',
     laptop: '1024px',
@@ -18,24 +19,24 @@ export const ProductsListContainer =styled.div`
   background-color: #fff;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   
-    @media ${device.mobile} { 
+    @media ${device.mobile} { np
         flex-direction: row;
         justify-content: center;
     
         li {
-            margin: 14px;
+            margin: 10px;
             height: 450px;
             list-style-type: none;
         };
     }
 `;
+
 export const ListedProductCard = styled.div`    
     border: 1px solid #ccc;
     border-radius: 4px;
-    padding: 25px;
+    padding: 30px;
     background-color: #fff;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-
 `;
 
 
@@ -60,15 +61,19 @@ export const InfoContainer = styled.div`
 `;
 
 export const ProductTitle = styled.h2`
-
+    font-family: "Titillium Web", sans-serif;
+    font-weight: 400;
+    font-style: normal;
 `;
 export const ProductPrice = styled.h1`
-
+    font-family: "Titillium Web", sans-serif;
+    font-weight: 600;
+    font-style: normal;
 `;
 export const ButtonContainer = styled.div`
     display: flex;
     flex-direction: column;
-
+    margin-top: 20px;
 `;
 
 export const Button = styled.button`

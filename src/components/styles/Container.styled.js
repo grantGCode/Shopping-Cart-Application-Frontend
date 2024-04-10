@@ -42,10 +42,10 @@ const size = {
       text-align: end;
     }
   }
-`
-
+`;
 
 export const NavbarContainer = styled.nav`
+    position: fixed;
     background-color: rgba(195, 195, 195, 0.5);
     display: flex;
     justify-content: space-between;
@@ -72,8 +72,8 @@ background-color: transparent;
 color:  white;
 text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
 border: 2px solid ${props => 
-    props.borderColor || '#3498db'};
-`
+  props.borderColor || '#3498db'};
+`;
 
 export const RemoveButton = styled.button`
 
