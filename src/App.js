@@ -6,26 +6,24 @@ import Success from './pages/Success.jsx'
 import { CartProvider } from './CartContext.js'
 import { ToastContainer } from 'react-toastify';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import GlobalStyles from './components/styles/Global.js' 
 
 
 function App() {
   return (
     <CartProvider>
-      <GlobalStyles />
-        <Router>
-          <Routes>
-            <Route 
-              exact path='/' 
-              element={
-                <Store />
-              }
-            ></Route>  
-            <Route path='/success' element={<Success />} />
-            <Route path='/cancel' element={<Cancel />} />
-          </Routes>
-        </Router>
-        <ToastContainer />
+      <Router>
+        <Routes>
+          <Route 
+            exact path='/' 
+            element={
+              <Store />
+            }
+          ></Route>  
+          <Route path='/success' element={<Success />} />
+          <Route path='/cancel' element={<Cancel />} />
+        </Routes>
+      </Router>
+    <ToastContainer />
     </CartProvider>
   );
 }
