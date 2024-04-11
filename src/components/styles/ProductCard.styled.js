@@ -87,7 +87,7 @@ export const Button = styled.button`
     font-weight: 700;
     font-style: normal;    
     color: white;
-background: linear-gradient(to bottom right, blue, purple);
+    background: linear-gradient(to bottom right, blue, purple);
 
     &:hover {
         color: rgba(191, 194, 195); 

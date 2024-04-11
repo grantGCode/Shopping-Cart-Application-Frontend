@@ -1,11 +1,18 @@
 import {useState} from 'react'
-import { NavbarContainer, ButtonCart, TitleContainer, CartCount, YourCart } from './styles/Container.styled';
+import { useShoppingCartContext } from '../CartContext';
+import ItemCard from './ItemCard'
 import { Modal, Col, Button, ToastContainer} from 'react-bootstrap'
 import { toast } from 'react-toastify';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCartShopping } from '@fortawesome/free-solid-svg-icons'
-import { useShoppingCartContext } from '../CartContext';
-import ItemCard from './ItemCard'
+import {
+  NavbarContainer, 
+  ButtonCart, 
+  TitleContainer,
+  CartCount,
+  Icon,
+  YourCart 
+} from './styles/Navbar.styles';
 
 export default function NavBar() {
   const [show, setShow] = useState(false);
@@ -57,8 +64,10 @@ export default function NavBar() {
           >
             <YourCart> 
               {'Your Cart '}
-            </YourCart> 
-            <FontAwesomeIcon icon={faCartShopping} /> 
+            </YourCart>
+            <Icon> 
+              <FontAwesomeIcon icon={faCartShopping} /> 
+            </Icon>
             <CartCount>
               {`       (${cartItemCount})`}
             </CartCount>
