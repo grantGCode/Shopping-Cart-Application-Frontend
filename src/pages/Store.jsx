@@ -23,7 +23,7 @@ function Store() {
               product={product} // Passing individual product as prop
             />
           </li>
-        ))};
+        ))}
       </ProductsListContainer>
         <RemoveButton 
           onClick={purgeShoppingCart}

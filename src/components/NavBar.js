@@ -1,5 +1,5 @@
 import {useState} from 'react'
-import { NavbarContainer, ButtonCart, TitleContainer } from './styles/Container.styled';
+import { NavbarContainer, ButtonCart, TitleContainer, CartCount, YourCart } from './styles/Container.styled';
 import { Modal, Col, Button, ToastContainer} from 'react-bootstrap'
 import { toast } from 'react-toastify';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
@@ -55,11 +55,13 @@ export default function NavBar() {
             type='button' 
             onClick={handleShow}
           >
-            <h5 className='my-0 mx-0'> 
-              {'Your Cart '} 
-              <FontAwesomeIcon icon={faCartShopping} /> 
+            <YourCart> 
+              {'Your Cart '}
+            </YourCart> 
+            <FontAwesomeIcon icon={faCartShopping} /> 
+            <CartCount>
               {`       (${cartItemCount})`}
-            </h5> 
+            </CartCount>
           </ButtonCart>            
             <div className='display-modal'>
               <Modal align='center' className='Modal-Window' show={show} onHide={handleClose}>

@@ -80,11 +80,7 @@ const size = {
 `;
 
 export const NavbarContainer = styled.nav`
-  display: flex;
-  justify-content: space-between;
-  background-color: rgba(195, 195, 195, 0.5);
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
-
+  
   @media ${device.mobile} { 
     max-width: 500px;
     position: fixed;
@@ -92,24 +88,87 @@ export const NavbarContainer = styled.nav`
   }
     
   @media ${device.laptop} { 
+    display: flex;
+    justify-content: space-between;
     max-width: auto;
     position: fixed;
   }
     
   @media ${device.desktop} {
+    display: flex;
+    justify-content: space-between;
     max-width: 1400px;
     position: fixed;
   }
 `;
 
 export const ButtonCart = styled.button`
-justify-content: end;
-background-color: transparent;
-color:  white;
-text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
-border: 2px solid ${props => 
-  props.borderColor || '#3498db'};
+  @media ${device.mobile} {
+    display: flex;
+    flex-direction: row;
+    margin-left: 180px;
+    padding-bottom: 20px
+    padding: 10px;
+    background: linear-gradient(to bottom right, #0dcaf0, #fff);;
+    color:  white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
+    border: 2px solid ${props => 
+      props.borderColor || '#3498db'
+    };
+    border-radius: 6px;
+    
+  }
+
+  @media ${device.laptop} {
+    max-width: 500px;
+    position: fixed;
+    bottom: 0;
+    justify-content: end;
+    background-color: #0dcaf0;
+    color:  white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
+    border: 2px solid ${props => 
+      props.borderColor || '#3498db'
+    };
+  }
+
+  @media ${device.desktop} {
+    max-width: 500px;
+    position: fixed;
+    bottom: 0;
+    justify-content: end;
+    background-color: #0dcaf0;
+    color:  white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
+    border: 2px solid ${props => 
+      props.borderColor || '#3498db'
+    };
+  }
 `;
+
+export const YourCart = styled.h5`
+  @media ${device.mobile} {
+    display: none;
+  }
+  
+  @media ${device.laptop} {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
+  }
+
+  @media ${device.desktop} {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
+  }
+`
+
+export const FontAwesomeIcon = styled.h5`
+  
+`
+
+export const CartCount =styled.h5`
+
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
+
+`
 
 export const RemoveButton = styled.button`
 
