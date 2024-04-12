@@ -24,12 +24,19 @@ import {
   ModalFooter,
   TotalCost,
   ButtonPurchase
-} from './Modal.styles'
+} from './styles/Modal.styles'
 
 export default function NavBar() {
   const [showModal, setShowModal] = useState(false);
-  const CloseModal = () => setShowModal(false);
-  const OpenModal = () => setShowModal(true)
+  //open the modal
+  const openModal = () => {
+    setShowModal(true);
+  };
+  //close the modal
+  const closeModal = () => {
+    setShowModal(false);
+  };
+
   
   const {cartItemCount, Items, getTotalCost} = useShoppingCartContext()
 
@@ -74,9 +81,9 @@ export default function NavBar() {
             {"(Secure Swift Shopper's Cart)"}
           </p>
         </TitleContainer>
-          <ButtonCart  
+          <ButtonCart
             type='button' 
-            onClick={OpenModal}
+            onClick={openModal} // Open modal on button click
           >
             <YourCart> 
               {'Your Cart '}
@@ -88,14 +95,17 @@ export default function NavBar() {
               {`       (${cartItemCount})`}
             </CartCount>
           </ButtonCart>
-          <ModalContainer showModal={setShowModal}>
+          <div>
+          { showModal === false ? 
+          (null) : 
+          (<ModalContainer showModal={setShowModal}>
             <ModalContent>
               <ModalHeader>
                 <ModalTitle>
                   Your Shopping Cart
                 </ModalTitle>
-                <ButtonClose  
-                  onClick={CloseModal}
+                <ButtonClose
+                  onClick={closeModal} // Close modal on button click
                 >
                   X
                 </ButtonClose>
@@ -127,7 +137,8 @@ export default function NavBar() {
                   </ButtonPurchase>
               </ModalFooter>
             </ModalContent>
-          </ModalContainer>
+          </ModalContainer>)}
+          </div>
       </NavbarContainer>
       <ToastContainer />
     </div>

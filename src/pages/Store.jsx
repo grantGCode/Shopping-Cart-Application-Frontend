@@ -27,7 +27,7 @@ function Store() {
       </ProductsListContainer>
         <RemoveButton 
           onClick={purgeShoppingCart}
-      >
+        >
         Remove All From Cart
       </RemoveButton>
     </>
