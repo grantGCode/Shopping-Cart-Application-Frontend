@@ -1,7 +1,7 @@
 import {useState} from 'react'
 import { useShoppingCartContext } from '../CartContext';
 import ItemCard from './ItemCard'
-import { Modal, ToastContainer} from 'react-bootstrap'
+import { ToastContainer } from 'react-bootstrap'
 import { toast } from 'react-toastify';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCartShopping } from '@fortawesome/free-solid-svg-icons'
@@ -15,19 +15,28 @@ import {
 } from './styles/Navbar.styles';
 import {
   ModalHeader,
+  ModalContainer,
+  ModalContent,
   ModalTitle,
   ButtonClose,
   ModalBody,
+  NoItems,
+  ModalFooter,
+  TotalCost,
   ButtonPurchase
-} from './Modle.styles'
+} from './Modal.styles'
 
 export default function NavBar() {
-  const [show, setShow] = useState(false);
-  const handleClose = () => setShow(false);
-  const handleShow = () => setShow(true)
+  const [showModal, setShowModal] = useState(false);
+  const CloseModal = () => setShowModal(false);
+  const OpenModal = () => setShowModal(true)
   
   const {cartItemCount, Items, getTotalCost} = useShoppingCartContext()
 
+
+
+
+  /* Purchase Items Button on click function*/
   const buyCartContent = async () => {
     try {
       const response = await fetch('https://us-shopper-94591f5ffa5c.herokuapp.com',{
@@ -67,7 +76,7 @@ export default function NavBar() {
         </TitleContainer>
           <ButtonCart  
             type='button' 
-            onClick={handleShow}
+            onClick={OpenModal}
           >
             <YourCart> 
               {'Your Cart '}
@@ -78,50 +87,47 @@ export default function NavBar() {
             <CartCount>
               {`       (${cartItemCount})`}
             </CartCount>
-          </ButtonCart>            
-            <div className='display-modal'>
-              <Modal align='center' className='Modal-Window' show={show} onHide={handleClose}>
-                    <ModalHeader>
-                      <ModalTitle>
-                        Your Shopping Cart
-                      </ModalTitle>
-                      <ButtonClose 
-                        type='button' 
-                        className='Close-Modal' 
-                        variant="danger" 
-                        onClick={handleClose}
-                      >X
-                      </ButtonClose>
-                    </ModalHeader>                    
-                  <div className='body'>
-                    <ModalBody>
-                      {Items.length === 0 ? (
-                        <p>There are no items in your shopping cart at this time.</p>
-                        ) : Items.map((item) => 
-                            (
-                              <div align='center' > 
-                                <ItemCard                   
-                                  className="border border-primary"
-                                  key={Items.id}
-                                  item={item}
-                                />  
-                              </div>
-                            ))
-                          }
-                      <h2 className='Total'>{`Total: $${getTotalCost()}`}</h2>
-                      <ButtonPurchase 
-                        className='btn mt-2'
-                        variant='success'
-                        onClick={() => {
-                          toast.success('Possessing your order.');
-                          buyCartContent();
-                          }}
-                      >Purchase Items
-                      </ButtonPurchase>
-                    </ModalBody>
-                  </div>
-              </Modal>
-            </div> 
+          </ButtonCart>
+          <ModalContainer showModal={setShowModal}>
+            <ModalContent>
+              <ModalHeader>
+                <ModalTitle>
+                  Your Shopping Cart
+                </ModalTitle>
+                <ButtonClose  
+                  onClick={CloseModal}
+                >
+                  X
+                </ButtonClose>
+              </ModalHeader>                    
+              <ModalBody>
+                {Items.length === 0 ? (
+                  <NoItems>There are no items in your shopping cart.</NoItems>
+                  ) : Items.map((item) => 
+                    ( <div> 
+                      <ItemCard                   
+                        className="border border-primary"
+                        key={Items.id}
+                        item={item}
+                      />  
+                    </div> ))
+                  }
+                </ModalBody>    
+                <ModalFooter>
+                  <TotalCost>
+                    {`Total: $${getTotalCost()}`}
+                  </TotalCost>
+                  <ButtonPurchase 
+                    onClick={() => {
+                      toast.success('Possessing your order.');
+                      buyCartContent();
+                    }}
+                  >
+                    Purchase Items
+                  </ButtonPurchase>
+              </ModalFooter>
+            </ModalContent>
+          </ModalContainer>
       </NavbarContainer>
       <ToastContainer />
     </div>

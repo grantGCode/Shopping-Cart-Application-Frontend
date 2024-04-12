@@ -55,7 +55,7 @@ export const ButtonCart = styled.button`
 
         &:hover {
             color: rgba(50, 50, 50); 
-            background: linear-gradient(to bottom right, #797979, #0CB0D1); /* Change the background color on hover */
+            background: linear-gradient(to bottom right, #797979, #0CB0D1); 
             border: 2px solid ${props => 
                 props.borderColor || 'rgb(128, 128, 128)'
             };
@@ -112,7 +112,6 @@ export const CartCount =styled.h5`
     display: flex;
     padding-left: 10px;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
-  
 `
 
 export const TitleContainer = styled.div`
