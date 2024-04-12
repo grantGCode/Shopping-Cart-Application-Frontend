@@ -18,7 +18,7 @@ export const NavbarContainer = styled.nav`
     @media ${device.mobile} { 
         position: fixed;
         bottom: 50px;
-        left: 38.5%;
+        left: 36%;
         display: flex;
         justify-content: center;
     }
