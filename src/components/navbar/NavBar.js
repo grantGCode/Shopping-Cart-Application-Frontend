@@ -1,18 +1,20 @@
+/* Components*/
 import {useState} from 'react'
-import { useShoppingCartContext } from '../CartContext';
-import ItemCard from './ItemCard'
+import { useShoppingCartContext } from '../../CartContext.js';
+import ItemCard from '../item-card/ItemCard';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faCartShopping } from '@fortawesome/free-solid-svg-icons';
+/* Styling */
 import { ToastContainer } from 'react-bootstrap'
 import { toast } from 'react-toastify';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faCartShopping } from '@fortawesome/free-solid-svg-icons'
 import {
-  NavbarContainer, 
-  ButtonCart, 
-  TitleContainer,
-  CartCount,
+  NavbarContainer,
+  ButtonCart,
+  YourCart,
   Icon,
-  YourCart 
-} from './styles/Navbar.styles';
+  CartCount,
+  TitleContainer
+} from './Navbar.styles.js'
 import {
   ModalHeader,
   ModalContainer,
@@ -24,7 +26,7 @@ import {
   ModalFooter,
   TotalCost,
   ButtonPurchase
-} from './styles/Modal.styles'
+} from './Modal.styles.js'
 
 export default function NavBar() {
   const [showModal, setShowModal] = useState(false);

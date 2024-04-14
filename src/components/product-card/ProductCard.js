@@ -1,4 +1,4 @@
-import { ShoppingCartContext } from '../CartContext.js'
+import { ShoppingCartContext } from '../../CartContext.js'
 import { useContext } from 'react';
 import { toast } from 'react-toastify';
 import { 
@@ -10,7 +10,7 @@ import {
   Forum, 
   Button, 
   ButtonContainer
-} from './styles/ProductCard.styled.js';
+} from './ProductCard.styled.js';
 
 function ProductCard({product}) {
   const cartContext = useContext(ShoppingCartContext);

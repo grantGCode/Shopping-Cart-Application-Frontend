@@ -1,11 +1,11 @@
 /* Components data, and Contexts */
-import Navbar from '../components/NavBar.js'
-import ProductCard from '../components/ProductCard.js'
+import Navbar from '../components/navbar/NavBar.js'
+import ProductCard from '../components/product-card/ProductCard.js'
 import { products } from '../productStore.js'
 import { useShoppingCartContext } from '../CartContext.js'
 /* Styled Components */
-import { RemoveButton } from '../components/styles/Container.styled.js'
-import { ProductsListContainer } from '../components/styles/ProductCard.styled.js'
+import { RemoveButton } from '../components/Container.styled.js'
+import { ProductsListContainer } from '../components/product-card/ProductCard.styled.js'
 
  
 

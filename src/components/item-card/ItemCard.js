@@ -1,6 +1,6 @@
 import {useContext} from "react"
-import { ShoppingCartContext } from '../CartContext'
-import { getProductData } from '../productStore'
+import { ShoppingCartContext } from '../../CartContext'
+import { getProductData } from '../../productStore'
 import { 
     Form, 
     Card,
@@ -8,7 +8,7 @@ import {
     Title, 
     Quantity, 
     RemoveButton 
-} from "./styles/ItemCard.styled";
+} from "./ItemCard.styled";
 
 function ItemCard({item}) {
     const cartContext = useContext(ShoppingCartContext);
