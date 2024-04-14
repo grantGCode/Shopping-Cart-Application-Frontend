@@ -33,6 +33,7 @@ export const ModalHeader =styled.div`
     display: flex;
     justify-content: space-between;
     align-items: start;
+    margin-bottom: 10px;
     padding-bottom: 15px; 
     border-bottom: solid 1px gray;
 `;
@@ -55,6 +56,7 @@ export const ModalTitle = styled.div`
 export const ModalFooter = styled.div`
     display: flex;
     justify-context: space-between;
+    margin-top: 10px;
     padding: 20px;
     border-top: solid 1px gray;
 `;

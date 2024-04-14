@@ -1,34 +1,35 @@
-import {Card, Form, Row, Col, Button} from 'react-bootstrap'
-import {ShoppingCartContext} from '../CartContext'
-import {getProductData} from '../productStore'
 import {useContext} from "react"
+import { ShoppingCartContext } from '../CartContext'
+import { getProductData } from '../productStore'
+import { 
+    Form, 
+    Card,
+    Info, 
+    Title, 
+    Quantity, 
+    RemoveButton 
+} from "./styles/ItemCard.styled";
 
 function ItemCard({item}) {
-const cartContext = useContext(ShoppingCartContext);
+    const cartContext = useContext(ShoppingCartContext);
 
-const prodRef = getProductData(item.id)
+    const prodRef = getProductData(item.id)
 
 
-return(
-<Form>
-    <Card>
-        <Card.Body>
-            <Row>
-                <Col>
-                    <h3>{prodRef.title}</h3>
-                    <h3>{`x${item.quantity}`}</h3>
-                    <Button
-                        variant="secondary" 
-                        size="sm"
-                        onClick={() => {cartContext.removeOneItem(item)}}
-                    >
-                        - RemoveFrom Cart
-                    </Button>
-                </Col>
-            </Row>
-        </Card.Body>
-    </Card>
-</Form>
+    return(
+        <Form>
+            <Card>
+                <Info>
+                    <Title>{prodRef.title}</Title>
+                    <Quantity>{`x${item.quantity}`}</Quantity>
+                </Info>
+                <RemoveButton
+                    onClick={() => {cartContext.removeOneItem(item)}}
+                >
+                    - Remove From Cart
+                </RemoveButton>
+            </Card>
+        </Form>
     )
 }
 
