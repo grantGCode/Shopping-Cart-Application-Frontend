@@ -15,7 +15,8 @@ export const device = {
 
 export const Form = styled.div`
     display: flex;
-    justify-content: center
+    justify-content: center;
+    width: 100%;
 `;
 
 export const Card = styled.div`
@@ -30,11 +31,21 @@ export const Card = styled.div`
 `;
 
 export const Info = styled.div`
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    padding-left: 10px;
+    @media ${device.iphone} {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
 
+    @media ${device.mobile} {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        padding-left: 10px;
+        padding-right: 40px;
+    }
 `;
 
 export const Title = styled.h3`
@@ -50,14 +61,29 @@ export const Quantity = styled.h5`
 `;
 
 export const RemoveButton = styled.button`
-    width: 200px;
-    height: 40px;
-    border-radius: 8px;
-    font-family: "Prompt", sans-serif;
-    font-weight: 700;
-    font-style: normal;    
-    color: rgba(247, 247, 247, 1);
-    background-color: rgb(180, 180, 180);
-    border-color: rgba(63, 63, 63, 1)
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    @media ${device.iPhone} {
+        width: 180px;
+        height: 40px;
+        border-radius: 8px;
+        font-family: "Prompt", sans-serif;
+        font-weight: 700;
+        font-style: normal;    
+        color: rgba(247, 247, 247, 1);
+        background-color: rgb(180, 180, 180);
+        border-color: rgba(63, 63, 63, 1)
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    @media ${device.mobile} {
+        width: 170px;
+        height: 40px;
+        border-radius: 8px;
+        font-family: "Prompt", sans-serif;
+        font-weight: 700;
+        font-style: normal;    
+        color: rgba(247, 247, 247, 1);
+        background-color: rgb(180, 180, 180);
+        border-color: rgba(63, 63, 63, 1)
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
 `;

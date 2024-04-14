@@ -13,19 +13,34 @@ export const device = {
 };
 
 export const ModalContainer = styled.div`
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.5);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-`
+
+    @media ${device.iPhone} {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    @media ${device.mobile} {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+`;
 export const ModalContent = styled.div`
     background: #fff;
-    padding: 20px;
+    padding: 25px;
     border-radius: 14px;
 `;
 
@@ -55,9 +70,10 @@ export const ModalTitle = styled.div`
 
 export const ModalFooter = styled.div`
     display: flex;
-    justify-context: space-between;
+    justify-content: space-between;
+    align-items: center;
     margin-top: 10px;
-    padding: 20px;
+    padding-top: 20px;
     border-top: solid 1px gray;
 `;
 
@@ -66,29 +82,62 @@ export const ModalBody = styled.div`
 `;
 
 export const NoItems = styled.div`
-    padding: 25px;
+    @media ${device.iPhone} {
+
+    }
+
+    @media ${device.mobile} {
+        padding: 25px;
+    }
 `;
 
 export const TotalCost = styled.h2`
-    margin-right: 50px;    
+    display: flex;
+    flex-direction: row;  
 `;
 
 export const ButtonPurchase = styled.button`
-    color: white;
-    background: linear-gradient(to bottom right, #0dcaf0, rgb(229, 229, 229));
-    font-size: 1.25em;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
-    font-family: "Prompt", sans-serif;
-    border-radius: 8px;
-    border: 2px solid ${props => 
-        props.borderColor || 'gray'
-    };
 
-    &:hover {
-        color: rgba(50, 50, 50); 
-        background: linear-gradient(to bottom right, #797979, #0CB0D1); 
+    @media ${device.iPhone} {
+        width: 54%;
+        height: 30%;
+        color: white;
+        background: linear-gradient(to bottom right, #0dcaf0, rgb(229, 229, 229));
+        font-size: 1.25em;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
+        font-family: "Prompt", sans-serif;
+        border-radius: 8px;
         border: 2px solid ${props => 
-            props.borderColor || 'rgb(0, 0, 0)'
+            props.borderColor || 'gray'
         };
+
+        &:hover {
+            color: rgba(50, 50, 50); 
+            background: linear-gradient(to bottom right, #797979, #0CB0D1); 
+            border: 2px solid ${props => 
+                props.borderColor || 'rgb(0, 0, 0)'
+            };
+        }
+    }
+    @media ${device.mobile} {
+        width: 50%;
+        height: 30%;
+        color: white;
+        background: linear-gradient(to bottom right, #0dcaf0, rgb(229, 229, 229));
+        font-size: 1.25em;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
+        font-family: "Prompt", sans-serif;
+        border-radius: 8px;
+        border: 2px solid ${props => 
+            props.borderColor || 'gray'
+        };
+
+        &:hover {
+            color: rgba(50, 50, 50); 
+            background: linear-gradient(to bottom right, #797979, #0CB0D1); 
+            border: 2px solid ${props => 
+                props.borderColor || 'rgb(0, 0, 0)'
+            };
+        }
     }
 `;

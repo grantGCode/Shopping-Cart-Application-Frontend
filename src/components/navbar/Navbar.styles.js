@@ -1,12 +1,14 @@
 import styled from 'styled-components'
 
 const size = {
+    iPhone:'375px',
     mobile:'425px',
     laptop: '1024px',
     desktop: '2560px'
 };
   
 export const device = {
+    iPhone: `(min-width: ${size.iPhone})`,
     mobile: `(min-width: ${size.mobile})`,
     laptop: `(min-width: ${size.laptop})`,
     desktop: `(min-width: ${size.desktop})`,
@@ -15,6 +17,14 @@ export const device = {
     
 export const NavbarContainer = styled.nav`
     
+    @media ${device.iPhone} {
+        position: fixed;
+        bottom: 50px;
+        left: 36%;
+        display: flex;
+        justify-content: center;            
+    }
+
     @media ${device.mobile} { 
         position: fixed;
         bottom: 50px;
@@ -41,6 +51,18 @@ export const NavbarContainer = styled.nav`
 
 export const ButtonCart = styled.button`
     
+    @media ${device.iPhone} {
+        display: flex;
+        flex-direction: row;
+        padding: 5px 30px 5px; 30px;
+        background: linear-gradient(to bottom right, #0dcaf0, rgb(229, 229, 229));
+        color: white;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
+        border: 2px solid ${props => 
+            props.borderColor || '#3498db'
+        };
+        border-radius: 6px;
+    }
     @media ${device.mobile} {
         display: flex;
         flex-direction: row;
@@ -91,6 +113,10 @@ export const ButtonCart = styled.button`
 `;
 
 export const YourCart = styled.h5`
+    @media ${device.iPhone} {
+        display: none;
+    }
+
     @media ${device.mobile} {
       display: none;
     }
@@ -115,6 +141,11 @@ export const CartCount =styled.h5`
 `
 
 export const TitleContainer = styled.div`
+    
+    @media ${device.iPhone} {
+        display: none;
+    }
+
     @media ${device.mobile} {
         display: none;
     }
