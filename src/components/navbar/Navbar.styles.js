@@ -13,7 +13,6 @@ export const device = {
     laptop: `(min-width: ${size.laptop})`,
     desktop: `(min-width: ${size.desktop})`,
 };
-
     
 export const NavbarContainer = styled.nav`
     
@@ -38,6 +37,7 @@ export const NavbarContainer = styled.nav`
         justify-content: space-between;
         max-width: auto;
         position: fixed;
+        top: 0;
     }
         
     @media ${device.desktop} {
@@ -45,10 +45,81 @@ export const NavbarContainer = styled.nav`
         justify-content: space-between;
         max-width: 1400px;
         position: fixed;
+        top: 0;
     }
 `;
 
-
+export const TitleContainer = styled.div`
+        
+    @media ${device.iPhone} {
+        display: none;
+    }
+    
+    @media ${device.mobile} {
+        display: none;
+    }
+       
+    @media ${device.laptop} { 
+        display: block;
+        color: white;
+      
+        h1, p {
+          margin: 0;
+        }
+      
+        h1 {
+            display: flex;
+            justify-content: start;
+            font-size: 4em;
+            text-align: center;
+        }
+      
+        p {
+            display: flex;
+            justify-content: start;
+            font-size: 1em;
+            font-style: italic;
+        }
+      
+        h1, p {
+            max-width: 500px;
+            padding-left: 5px;
+            font-size: 1.5em;
+            text-align: end;
+        }
+    }
+            
+    @media ${device.desktop} {
+        color: white;
+      
+        h1, p {
+          margin: 0;
+        }
+          
+        h1 {
+            display: flex;
+            justify-content: start;
+            font-size: 4em;
+            text-align: center;
+        }
+          
+        p {
+          display: flex;
+          justify-content: start;
+          font-size: 1em;
+          font-style: italic;
+        }
+          
+        h1, p {
+            max-width: 500px;
+            padding-left: 5px;
+            font-size: 1.5em;
+            text-align: end;
+        }
+    }
+        
+`;
+    
 export const ButtonCart = styled.button`
     
     @media ${device.iPhone} {
@@ -63,6 +134,7 @@ export const ButtonCart = styled.button`
         };
         border-radius: 6px;
     }
+
     @media ${device.mobile} {
         display: flex;
         flex-direction: row;
@@ -82,13 +154,9 @@ export const ButtonCart = styled.button`
                 props.borderColor || 'rgb(128, 128, 128)'
             };
         }
-        
-    }
 
     @media ${device.laptop} {
         max-width: 500px;
-        position: fixed;
-        bottom: 0;
         justify-content: end;
         background-color: #0dcaf0;
         color:  white;
@@ -100,8 +168,6 @@ export const ButtonCart = styled.button`
   
     @media ${device.desktop} {
         max-width: 500px;
-        position: fixed;
-        bottom: 0;
         justify-content: end;
         background-color: #0dcaf0;
         color:  white;
@@ -138,75 +204,4 @@ export const CartCount =styled.h5`
     display: flex;
     padding-left: 10px;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
-`
-
-export const TitleContainer = styled.div`
-    
-    @media ${device.iPhone} {
-        display: none;
-    }
-
-    @media ${device.mobile} {
-        display: none;
-    }
-   
-    @media ${device.laptop} { 
-        display: block;
-        color: white;
-  
-        h1, p {
-          margin: 0;
-        }
-  
-        h1 {
-          display: flex;
-          justify-content: start;
-          font-size: 4em;
-          text-align: center;
-        }
-  
-        p {
-          display: flex;
-          justify-content: start;
-          font-size: 1em;
-          font-style: italic;
-        }
-  
-        h1, p {
-            max-width: 500px;
-            padding-left: 5px;
-            font-size: 1.5em;
-            text-align: end;
-        }
-    }
-        
-    @media ${device.desktop} {
-        color: white;
-  
-        h1, p {
-          margin: 0;
-        }
-      
-        h1 {
-          display: flex;
-          justify-content: start;
-          font-size: 4em;
-          text-align: center;
-        }
-      
-        p {
-          display: flex;
-          justify-content: start;
-          font-size: 1em;
-          font-style: italic;
-        }
-      
-        h1, p {
-            max-width: 500px;
-            padding-left: 5px;
-            font-size: 1.5em;
-            text-align: end;
-        }
-    }
-    
 `;
