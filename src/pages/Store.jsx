@@ -3,11 +3,23 @@ import Navbar from '../components/navbar/NavBar.js'
 import ProductCard from '../components/product-card/ProductCard.js'
 import { products } from '../productStore.js'
 import { useShoppingCartContext } from '../CartContext.js'
+import { loremIpsum } from 'lorem-ipsum'
 /* Styled Components */
-import { RemoveButton } from '../components/Container.styled.js'
+import { 
+  Info,
+  BrandName,
+  BrandInfo,
+  RemoveButton, 
+  DesktopContainer, 
+  ProductImage 
+} from '../components/Container.styled.js'
 import { ProductsListContainer } from '../components/product-card/ProductCard.styled.js'
 
- 
+const loremText = loremIpsum({
+  count: 5,
+  units: 'sentences',
+  format: 'plain',
+});
 
 function Store() {
   
@@ -16,6 +28,16 @@ function Store() {
   return (
     <>
       <Navbar />
+      <DesktopContainer>
+        <Info>
+          <BrandName>good Sleep</BrandName>
+          < BrandInfo>{loremText}</BrandInfo>
+        </Info>
+        <ProductImage 
+          src='/images/twoShirtImage.jpg'
+          alt='image unavailable'
+        />
+      </DesktopContainer>
       <ProductsListContainer>
         {products.map((product) => (
           <li key={product.id}>

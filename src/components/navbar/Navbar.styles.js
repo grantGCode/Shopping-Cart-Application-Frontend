@@ -37,7 +37,7 @@ export const NavbarContainer = styled.nav`
         justify-content: center;
         align-items: center;
         background-color: white;
-        border: 2px solid red;
+        border-bottom: 3px solid gray;
         width: 100%;
         height: 60px;
         position: fixed;
