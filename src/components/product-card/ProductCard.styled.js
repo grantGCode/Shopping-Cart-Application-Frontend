@@ -41,8 +41,8 @@ export const ProductsListContainer =styled.div`
         justify-content: center;
         
         li {
-            margin: 10px;
-            height: 300px;
+            margin: 10px;            
+            height: 450px;
             list-style-type: none;
             margin-bottom: 70px
         };

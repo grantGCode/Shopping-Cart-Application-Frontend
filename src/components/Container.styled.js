@@ -27,7 +27,7 @@ export const DesktopContainer = styled.div`
   @media ${device.laptop} {
     display: flex;
     align-items: center;
-    margin-top: 60px;
+    margin-top: 36px;
     margin-left: 10px;
     margin-right: 10px;
     padding-left: 40px; 
@@ -37,7 +37,15 @@ export const DesktopContainer = styled.div`
   }
   
   @media ${device.desktop} {
-
+    display: flex;
+    align-items: center;
+    margin-top: 36px;
+    margin-left: 10px;
+    margin-right: 10px;
+    padding-left: 40px; 
+    padding-right: 40px;
+    border-bottom: 3px solid gray;
+    border-radius: 4px    
   }
 `;
 
@@ -57,14 +65,25 @@ export const ProductImage =styled.img`
   }
 
   @media ${device.desktop} {
-
+    display: flex;
+    max-width: 830px;
+    max-height: 990px;
   }
 `;
 
 export const Info = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+
+  @media ${device.laptop} {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  @media ${device.desktop} {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
 `;
 
 export const BrandName = styled.h1`

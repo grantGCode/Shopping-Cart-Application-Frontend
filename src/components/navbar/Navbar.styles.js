@@ -34,26 +34,30 @@ export const NavbarContainer = styled.nav`
         
     @media ${device.laptop} { 
         display: flex;
-        justify-content: space-between;
-        align-items: center;
-        background-color: white;
-        border-bottom: 3px solid gray;
+        justify-content: end;
         width: 100%;
-        height: 60px;
-        position: fixed;
+        height: 37px;
+        position: fixed;    
         top: 0;
         left: 0;
+        background-color: rgba(200, 200, 200, 0.75);
+        border-radius: 2px;
     }
     
-    @media ${device.desktop} {
+    @media ${device.desktop}  
         display: flex;
-        justify-content: space-between;
-        position: fixed;
+        justify-content: end;
+        width: 100%;
+        height: 37px;
+        position: fixed;    
         top: 0;
+        left: 0;
+        background-color: rgba(200, 200, 200, 0.75);
+        border-radius: 2px;
     }
     `;
     
-export const TitleContainer = styled.div`      
+    export const TitleContainer = styled.div`      
     @media ${device.iPhone} {
         display: none;
     }
@@ -61,74 +65,61 @@ export const TitleContainer = styled.div`
     @media ${device.mobile} {
         display: none;
     }
-       
+    
     @media ${device.laptop} { 
         display: block;
-        padding-left: 40px;
-        color: Black;
-
-      
+        display: flex;
+        padding-left: 30px;
+        position: fixed;
+        left: 0;
+        color: black;
+        
         h1 {
             display: flex;
-            justify-content: start;
             align-items: center;
             margin-bottom: 0px;
-            font-size: 30px;
-            text-align: center;
+            font-size: 23px;
         }
-      
+        
         p {
             display: flex;
-            // justify-content: center;
-            margin-bottom: 5px;
+            margin-top: 15px;
+            margin-bottom: 0px;
+            padding-left: 15px;
             font-size: 15px;
             font-style: italic;
         }
-      
-        h1, p {
-            // max-width: 500px;
-            // font-size: 1.5em;
-            // text-align: end;
-        }
     }
     
-    @media ${device.desktop} {
-        color: white;
-        
-        h1, p {
-          margin: 0;
-        }
+    @media ${device.desktop} { 
+        display: block;
+        display: flex;
+        position: fixed;
+        left: 0;
+        color: black;
         
         h1 {
             display: flex;
-            justify-content: start;
-            font-size: 4em;
-            text-align: center;
+            align-items: center;
+            margin-bottom: 0px;
+            font-size: 30px;
         }
-          
+        
         p {
-          display: flex;
-          justify-content: start;
-          font-size: 1em;
-          font-style: italic;
+            display: flex;
+            margin-top: 15px;
+            margin-bottom: 0px;
+            padding-left: 15px;
+            font-size: 15px;
+            font-style: italic;
         }
-          
-        h1, p {
-            max-width: 500px;
-            padding-left: 5px;
-            font-size: 1.5em;
-            text-align: end;
-        }
-    }
-    
     `;
     
-export const ButtonCart = styled.button`
-    
+    export const ButtonCart = styled.button`
     @media ${device.iPhone} {
         display: flex;
         flex-direction: row;
-        padding: 5px 30px 5px; 30px;
+        padding: 0px 30px 0px; 30px;
         background: linear-gradient(to bottom right, #0dcaf0, rgb(229, 229, 229));
         color: white;
         text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
@@ -149,7 +140,7 @@ export const ButtonCart = styled.button`
             props.borderColor || '#3498db'
         };
         border-radius: 6px;
-    
+        
         &:hover {
             color: rgba(50, 50, 50); 
             background: linear-gradient(to bottom right, #797979, #0CB0D1); 
@@ -160,49 +151,82 @@ export const ButtonCart = styled.button`
     
     @media ${device.laptop} {
         display: flex;
-        justify-content: end;
-        // position: fixed;
-        // right: 0; 
+        justify-content: center;
         color: Black;
         background: transparent;
+        border: none;
         text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.125);
-      
+            
+        &:hover {
+            color: gray; 
+            background: rgba(206, 206, 206, 1);    
+        }
     }
-    
+
     @media ${device.desktop} {
-        max-width: 500px;
-        justify-content: end;
-        background-color: #0dcaf0;
-        color: white;
-        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
+        display: flex;
+        justify-content: center;
+        color: Black;
+        background: transparent;
+        border: none;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.125);
+            
+        &:hover {
+            color: gray; 
+            background: rgba(206, 206, 206, 1);    
+        }    
     }
-    `;
+`;
     
-export const YourCart = styled.h5`
-    @media ${device.iPhone} {
-        display: none;
-    }
-    
-    @media ${device.mobile} {
-      display: none;
-    }
-  
-    @media ${device.laptop} {
-    
-    }
-    
-    @media ${device.desktop} {
-    
-    }
+    export const YourCart = styled.h5`
+        @media ${device.iPhone} {
+            display: none;
+        }
+        
+        @media ${device.mobile} {
+            display: none;
+        }
+        
+        @media ${device.laptop} {
+            display: block;
+            align-item: center;            
+            padding-right: 5px;
+            font-size:15px;
+        }
+        
+        @media ${device.desktop} {
+            display: block;
+            align-item: center;            
+            padding-right: 5px;
+            font-size:15px;        
+        }
     `;
     
     export const Icon = styled.h5`
-    // text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
+    @media ${device.iPhone} {
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);    
+    }
+    
+    @media ${device.mobile} {
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
+    }
+    
+    @media ${device.laptop} {
+        align-item: center;        
+        font-size: 15px
+    }
+    
+    @media ${device.desktop} {
+        align-item: center;        
+        font-size:15px;    
+    }
     `;
     
     export const CartCount =styled.h5`
-    display: flex;
-    padding-left: 10px;
-    // text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
+        display: flex;
+        align-item: center;
+        padding-left: 5px;
+        font-size:15px;        
+        text-shadow: 2px rgba(0, 0, 0, 0.25);
     `;
     
