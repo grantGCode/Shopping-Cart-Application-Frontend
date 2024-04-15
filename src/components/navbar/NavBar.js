@@ -97,48 +97,48 @@ export default function NavBar() {
             </CartCount>
           </ButtonCart>
           <div>
-          { showModal === false ? 
-          (null) : 
-          (<ModalContainer showModal={setShowModal}>
-            <ModalContent>
-              <ModalHeader>
-                <ModalTitle>
-                  Your Shopping Cart
-                </ModalTitle>
-                <ButtonClose
-                  onClick={closeModal} // Close modal on button click
-                >
-                  X
-                </ButtonClose>
-              </ModalHeader>                    
-              <ModalBody>
-                {Items.length === 0 ? (
-                  <NoItems>There are no items in your shopping cart.</NoItems>
-                  ) : Items.map((item) => 
-                    ( <div> 
-                      <ItemCard                   
-                        className="border border-primary"
-                        key={Items.id}
-                        item={item}
-                      />  
-                    </div> ))
-                  }
-                </ModalBody>    
-                <ModalFooter>
-                  <TotalCost>
-                    {`Total: $${getTotalCost()}`}
-                  </TotalCost>
-                  <ButtonPurchase 
-                    onClick={() => {
-                      toast.success('Possessing your order.');
-                      buyCartContent();
-                    }}
+            { showModal === false ? 
+            (null) : 
+            (<ModalContainer showModal={setShowModal}>
+              <ModalContent>
+                <ModalHeader>
+                  <ModalTitle>
+                    Your Shopping Cart
+                  </ModalTitle>
+                  <ButtonClose
+                    onClick={closeModal} // Close modal on button click
                   >
-                    Purchase Items
-                  </ButtonPurchase>
-              </ModalFooter>
-            </ModalContent>
-          </ModalContainer>)}
+                    X
+                  </ButtonClose>
+                </ModalHeader>                    
+                <ModalBody>
+                  {Items.length === 0 ? (
+                    <NoItems>There are no items in your shopping cart.</NoItems>
+                    ) : Items.map((item) => 
+                      ( <div> 
+                        <ItemCard                   
+                          className="border border-primary"
+                          key={Items.id}
+                          item={item}
+                        />  
+                      </div> ))
+                    }
+                  </ModalBody>    
+                  <ModalFooter>
+                    <TotalCost>
+                      {`Total: $${getTotalCost()}`}
+                    </TotalCost>
+                    <ButtonPurchase 
+                      onClick={() => {
+                        toast.success('Possessing your order.');
+                        buyCartContent();
+                      }}
+                    >
+                      Purchase Items
+                    </ButtonPurchase>
+                </ModalFooter>
+              </ModalContent>
+            </ModalContainer>)}
           </div>
       </NavbarContainer>
       <ToastContainer />

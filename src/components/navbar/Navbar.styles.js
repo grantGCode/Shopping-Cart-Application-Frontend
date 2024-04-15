@@ -34,7 +34,7 @@ export const NavbarContainer = styled.nav`
         
     @media ${device.laptop} { 
         display: flex;
-        justify-content: center;
+        justify-content: space-between;
         align-items: center;
         background-color: white;
         border-bottom: 3px solid gray;
@@ -48,14 +48,12 @@ export const NavbarContainer = styled.nav`
     @media ${device.desktop} {
         display: flex;
         justify-content: space-between;
-        // max-width: 1400px;
-        // position: fixed;
+        position: fixed;
         top: 0;
     }
     `;
     
-    export const TitleContainer = styled.div`
-        
+export const TitleContainer = styled.div`      
     @media ${device.iPhone} {
         display: none;
     }
@@ -66,31 +64,31 @@ export const NavbarContainer = styled.nav`
        
     @media ${device.laptop} { 
         display: block;
+        padding-left: 40px;
         color: Black;
-        
-        h1, p {
-          margin: 0;
-        }
+
       
         h1 {
             display: flex;
             justify-content: start;
-            font-size: 4em;
+            align-items: center;
+            margin-bottom: 0px;
+            font-size: 30px;
             text-align: center;
         }
       
         p {
             display: flex;
-            justify-content: start;
-            font-size: 1em;
+            // justify-content: center;
+            margin-bottom: 5px;
+            font-size: 15px;
             font-style: italic;
         }
       
         h1, p {
-            max-width: 500px;
-            padding-left: 5px;
-            font-size: 1.5em;
-            text-align: end;
+            // max-width: 500px;
+            // font-size: 1.5em;
+            // text-align: end;
         }
     }
     
@@ -125,7 +123,7 @@ export const NavbarContainer = styled.nav`
     
     `;
     
-    export const ButtonCart = styled.button`
+export const ButtonCart = styled.button`
     
     @media ${device.iPhone} {
         display: flex;
@@ -181,7 +179,7 @@ export const NavbarContainer = styled.nav`
     `;
     
 export const YourCart = styled.h5`
-@media ${device.iPhone} {
+    @media ${device.iPhone} {
         display: none;
     }
     

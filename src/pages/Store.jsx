@@ -47,9 +47,9 @@ function Store() {
           </li>
         ))}
       </ProductsListContainer>
-        <RemoveButton 
-          onClick={purgeShoppingCart}
-        >
+      <RemoveButton 
+        onClick={purgeShoppingCart}
+      >
         Remove All From Cart
       </RemoveButton>
     </>
