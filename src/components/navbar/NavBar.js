@@ -84,7 +84,6 @@ export default function NavBar() {
           </p>
         </TitleContainer>
           <ButtonCart
-            type='button' 
             onClick={openModal} // Open modal on button click
           >
             <YourCart> 

@@ -34,22 +34,27 @@ export const NavbarContainer = styled.nav`
         
     @media ${device.laptop} { 
         display: flex;
-        justify-content: space-between;
-        max-width: auto;
+        justify-content: center;
+        align-items: center;
+        background-color: white;
+        border: 2px solid red;
+        width: 100%;
+        height: 60px;
         position: fixed;
         top: 0;
+        left: 0;
     }
-        
+    
     @media ${device.desktop} {
         display: flex;
         justify-content: space-between;
-        max-width: 1400px;
-        position: fixed;
+        // max-width: 1400px;
+        // position: fixed;
         top: 0;
     }
-`;
-
-export const TitleContainer = styled.div`
+    `;
+    
+    export const TitleContainer = styled.div`
         
     @media ${device.iPhone} {
         display: none;
@@ -61,8 +66,8 @@ export const TitleContainer = styled.div`
        
     @media ${device.laptop} { 
         display: block;
-        color: white;
-      
+        color: Black;
+        
         h1, p {
           margin: 0;
         }
@@ -88,14 +93,14 @@ export const TitleContainer = styled.div`
             text-align: end;
         }
     }
-            
+    
     @media ${device.desktop} {
         color: white;
-      
+        
         h1, p {
           margin: 0;
         }
-          
+        
         h1 {
             display: flex;
             justify-content: start;
@@ -117,10 +122,10 @@ export const TitleContainer = styled.div`
             text-align: end;
         }
     }
-        
-`;
     
-export const ButtonCart = styled.button`
+    `;
+    
+    export const ButtonCart = styled.button`
     
     @media ${device.iPhone} {
         display: flex;
@@ -134,7 +139,7 @@ export const ButtonCart = styled.button`
         };
         border-radius: 6px;
     }
-
+    
     @media ${device.mobile} {
         display: flex;
         flex-direction: row;
@@ -146,7 +151,7 @@ export const ButtonCart = styled.button`
             props.borderColor || '#3498db'
         };
         border-radius: 6px;
-
+    
         &:hover {
             color: rgba(50, 50, 50); 
             background: linear-gradient(to bottom right, #797979, #0CB0D1); 
@@ -154,54 +159,52 @@ export const ButtonCart = styled.button`
                 props.borderColor || 'rgb(128, 128, 128)'
             };
         }
-
+    
     @media ${device.laptop} {
-        max-width: 500px;
+        display: flex;
         justify-content: end;
-        background-color: #0dcaf0;
-        color:  white;
-        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
-        border: 2px solid ${props => 
-        props.borderColor || '#3498db'
-        };
+        // position: fixed;
+        // right: 0; 
+        color: Black;
+        background: transparent;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.125);
+      
     }
-  
+    
     @media ${device.desktop} {
         max-width: 500px;
         justify-content: end;
         background-color: #0dcaf0;
-        color:  white;
+        color: white;
         text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
-        border: 2px solid ${props => 
-        props.borderColor || '#3498db'
-        };
     }
-`;
-
+    `;
+    
 export const YourCart = styled.h5`
-    @media ${device.iPhone} {
+@media ${device.iPhone} {
         display: none;
     }
-
+    
     @media ${device.mobile} {
       display: none;
     }
   
     @media ${device.laptop} {
-        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
+    
     }
     
     @media ${device.desktop} {
-        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
+    
     }
-`;
-
-export const Icon = styled.h5`
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
-`;
-  
-export const CartCount =styled.h5`
+    `;
+    
+    export const Icon = styled.h5`
+    // text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
+    `;
+    
+    export const CartCount =styled.h5`
     display: flex;
     padding-left: 10px;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
-`;
+    // text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
+    `;
+    
