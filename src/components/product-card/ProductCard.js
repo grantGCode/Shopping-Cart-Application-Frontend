@@ -2,7 +2,8 @@ import { ShoppingCartContext } from '../../CartContext.js'
 import { useContext } from 'react';
 import { toast } from 'react-toastify';
 import { 
-  ListedProductCard, 
+  ListedProductCard,
+  ImageContainer, 
   ProductImage, 
   InfoContainer, 
   ProductTitle, 
@@ -16,10 +17,12 @@ function ProductCard({product}) {
   const cartContext = useContext(ShoppingCartContext);
   return (
     <ListedProductCard>
-      <ProductImage 
-        src='/images/imageShrit.jpg'
-        alt='image unavailable'
-      />
+      <ImageContainer>
+        <ProductImage 
+          src='/images/imageShrit.jpg'
+          alt='image unavailable'
+        />
+      </ImageContainer>
     <Forum>
       <InfoContainer>
         <ProductTitle>{product.title}</ProductTitle>

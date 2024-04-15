@@ -1,12 +1,14 @@
 import styled from "styled-components";
 
 const size = {
+    iPhone:'375px',
     mobile:'425px',
     laptop: '1024px',
     desktop: '2560px'
   }
   
   export const device = {
+    iPhone: `(min-width: ${size.iPhone})`,
     mobile: `(min-width: ${size.mobile})`,
     laptop: `(min-width: ${size.laptop})`,
     desktop: `(min-width: ${size.desktop})`,
