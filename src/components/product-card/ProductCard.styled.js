@@ -25,7 +25,7 @@ export const ProductsListContainer =styled.div`
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 
     @media ${device.iPhone} {
-        justify-content: center;
+        justify-content: flex-start;
         
         li {
             margin: 10px;
@@ -38,7 +38,7 @@ export const ProductsListContainer =styled.div`
     @media ${device.mobile} {
         flex-direction: row;
         flex-wrap: wrap;
-        justify-content: center;
+        justify-content: flex-start;
         
         li {
             margin: 10px;            
