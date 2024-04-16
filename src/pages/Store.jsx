@@ -2,14 +2,12 @@
 import Navbar from '../components/navbar/NavBar.js'
 import ProductCard from '../components/product-card/ProductCard.js'
 import { products } from '../productStore.js'
-import { useShoppingCartContext } from '../CartContext.js'
 import { loremIpsum } from 'lorem-ipsum'
 /* Styled Components */
 import { 
   Info,
   BrandName,
   BrandInfo,
-  RemoveButton, 
   DesktopContainer, 
   ProductImage 
 } from '../components/Container.styled.js'
@@ -22,8 +20,6 @@ const loremText = loremIpsum({
 });
 
 function Store() {
-  
-  const {purgeShoppingCart} = useShoppingCartContext();
 
   return (
     <>
@@ -47,11 +43,6 @@ function Store() {
           </li>
         ))}
       </ProductsListContainer>
-      <RemoveButton 
-        onClick={purgeShoppingCart}
-      >
-        Remove All From Cart
-      </RemoveButton>
     </>
   )
 }

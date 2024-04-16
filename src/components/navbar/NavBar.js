@@ -7,6 +7,7 @@ import { faCartShopping } from '@fortawesome/free-solid-svg-icons';
 /* Styling */
 import { ToastContainer } from 'react-bootstrap'
 import { toast } from 'react-toastify';
+import { RemoveButton } from '../Container.styled.js';
 import {
   NavbarContainer,
   ButtonCart,
@@ -40,7 +41,7 @@ export default function NavBar() {
   };
 
   
-  const {cartItemCount, Items, getTotalCost} = useShoppingCartContext()
+  const {cartItemCount, Items, getTotalCost, purgeShoppingCart} = useShoppingCartContext()
 
 
 
@@ -96,6 +97,15 @@ export default function NavBar() {
               {`       (${cartItemCount})`}
             </CartCount>
           </ButtonCart>
+          <div>
+            { Items.length === 0 ?
+            (null) :
+            (<RemoveButton 
+              onClick={purgeShoppingCart}
+            >
+              Remove All
+            </RemoveButton>)}
+          </div>
           <div>
             { showModal === false ? 
             (null) : 
