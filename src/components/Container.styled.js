@@ -36,7 +36,9 @@ export const DesktopContainer = styled.div`
   
   @media ${device.desktop} {
     display: flex;
+    justify-content: center  ;
     align-items: center;
+    max-width: 3500px;
     margin-top: 36px;
     padding-left: 50px; 
     padding-right: 50px;
@@ -79,7 +81,7 @@ export const Info = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    
+    width: 900px;
   }
 `;
 
