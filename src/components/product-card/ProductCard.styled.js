@@ -55,8 +55,9 @@ export const ProductsListContainer =styled.div`
         
         li {
             margin: 10x;
+            height: 350px;
             list-style-type: none;
-            margin-bottom: 40px
+            margin-bottom: 0px
         };
     };
 
@@ -67,6 +68,7 @@ export const ProductsListContainer =styled.div`
         
         li {
             margin: 10x;
+            height: 420px;
             list-style-type: none;
             margin-bottom: 40px
         };
@@ -98,7 +100,7 @@ export const ListedProductCard = styled.div`
         flex-direction: column;
         justify-content: center;
         border-radius: 12px;
-        width: 350px;
+        width: 321px;
         padding: 0px;
         box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     }
@@ -196,7 +198,7 @@ export const Forum = styled.div`
     
     @media ${device.desktop} {
         display: flex;
-        justify-content: space-between  ;
+        justify-content: space-between;
         flex-direction: row;
         padding: 20px 15px 0px 15px;
     }
@@ -222,7 +224,7 @@ export const InfoContainer = styled.div`
         display: flex;
         flex-direction: column;
         padding-top: 17px;
-        padding-left: 40px;
+        padding-left: 0px;
         width: 190px;
         justify-content: start;
     }
@@ -308,9 +310,8 @@ export const ButtonContainer = styled.div`
     @media ${device.laptop} {
         display: flex;
         flex-direction: column;
-        margin-top: 20px;
-        margin-right: 40px; 
-        padding-right: 10px;
+        margin-top: 20px; 
+        padding-right: 0px;
         width: 130px;
     }
         
@@ -361,7 +362,7 @@ export const Button = styled.button`
             
     @media ${device.desktop} {
         max-width: 350px;
-        height: 45px;
+        height: 50px;
         margin-bottom: 15px;
         font-weight: 1000;
         box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
