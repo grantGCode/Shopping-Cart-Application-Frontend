@@ -1,7 +1,7 @@
 # Secure Swift Shopper's Cart - (Frontend)
 
-## description
- 
+## Description
+
 This is a online shopping cart application for customers to purchase one or multiple, of various the same products. 
 Offered by any online merchant who implements it into their website or online store. With the benifit
  
@@ -10,7 +10,7 @@ This project was created with `Node.js`
 
 ## Getting started
 
-### required to run
+### Required to run
 1. `Node.js` is required and you'll have to install [Node](https://nodejs.org/en/download/) if you don't have it.
 2. `Stripe` will be processing payments from this application.
 3. If you do not have a stripe account you will need to create one on [Stripe.com](http://Stripe.com/register).
@@ -35,11 +35,11 @@ This project was created with `Node.js`
 
 ### Set up
 
-- install [Node](https://nodejs.org/en/download/) if you have not done so already.
-- run the backend server from [SSSC backend](https://github.com/grantGCode/Shopping-Cart-Application-Backend) on `port 5000` as default port.
+- Install [Node](https://nodejs.org/en/download/) if you have not done so already.
+- Run the backend server from [SSSC backend](https://github.com/grantGCode/Shopping-Cart-Application-Backend) on `port 5000` as default port.
 
 1. Clone this repository
-2. install all dependencies using `npm install`.
+2. Install all dependencies using `npm install`.
 3. Run `npm start` to run the application locally  on `port 3000` as default port.
 
 
