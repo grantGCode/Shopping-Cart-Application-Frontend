@@ -1,70 +1,52 @@
-# Getting Started with Create React App
+# Secure Swift Shopper's Cart - (Frontend)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## description
+ 
+This is a online shopping cart application for customers to purchase one or multiple, of various the same products. 
+Offered by any online merchant who implements it into their website or online store. With the benifit
+ 
+This project was created with `Node.js`
 
-## Available Scripts
 
-In the project directory, you can run:
+## Getting started
 
-### `npm start`
+### required to run
+1. `Node.js` is required and you'll have to install [Node](https://nodejs.org/en/download/) if you don't have it.
+2. `Stripe` will be processing payments from this application.
+3. If you do not have a stripe account you will need to create one on [Stripe.com](http://Stripe.com/register).
+4. SSSC backend server see [SSSC backend Repository](https://github.com/grantGCode/Shopping-Cart-Application-Backend) to clone and run the backend for this application to send payment to Stripe.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### Dependencies needed
+- react *version 18.2.0 or <*
+ - react-dom *version 18.2.0 or <*
+ - react-router-dom *version 6.21.1 or <*
+ - react-scrips *version 5.0.1 or <*            
+ - @testing-library/jest-dom *version 5.17.0 or <*
+ - @testing-library/react *version 13.4.0 or <*
+ - @testing-libraray/user-event *version 13.5.0 or <*
+ - web-vitals *version 2.1.4 or <*
+- "@fortawesome/fontawesome-svg-core *version 6.5.1 or < for icon used*
+ - @fortawesome/free-solid-svg-icons *version 6.5.1 or < for icon used*
+ - @fortawesome/react-fontawesome *version 0.2.0 or <*
+- styled-components *version 6.1.8or < for styling*
+- react-toastify *version 10.0.5 or < for alerts to user actions*
+- lorem-ipsum *version 2.0.8 or < used as place holder text*
 
-### `npm test`
+### Set up
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- install [Node](https://nodejs.org/en/download/) if you have not done so already.
+- run the backend server from [SSSC backend](https://github.com/grantGCode/Shopping-Cart-Application-Backend) on `port 5000` as default port.
 
-### `npm run build`
+1. Clone this repository
+2. install all dependencies using `npm install`.
+3. Run `npm start` to run the application locally  on `port 3000` as default port.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+<!-- ## How a user will buy a product -->
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Road map
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- Utilize a remote database that is easy for merchants and or business to use to store all references to their current and or future products. 
