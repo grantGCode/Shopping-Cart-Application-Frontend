@@ -15,87 +15,34 @@ const size = {
   };
 
 
-export const DesktopContainer = styled.div`
-  @media ${device.iPhone} {
-    display: none;
-  } 
+export const StoreStyledContainer = styled.div`
 
-  @media ${device.mobile} {
-    display: none;
-  }
-  
-  @media ${device.laptop} {
-    display: flex;
-    align-items: center;
-    margin-top: 36px;
-    padding-left: 50px; 
-    padding-right: 50px;
-    border-bottom: 4px solid rgba(140, 140, 140, 0.5);
-    border-radius: 2px
-  }
-  
-  @media ${device.desktop} {
-    display: flex;
-    justify-content: center  ;
-    align-items: center;
-    max-width: 3500px;
-    margin-top: 36px;
-    padding-left: 50px; 
-    padding-right: 50px;
-    border-bottom: 4px solid rgba(140, 140, 140, 0.5);
-    border-radius: 2spx    
-  }
-`;
-
-export const ProductImage =styled.img`
-  @media ${device.iPhone} {
-    display: none;
-  } 
-
-  @media ${device.mobile} {
-    display: none;
-  }
-
-  @media ${device.laptop} {
-    display: flex;
-    max-width: 530px;
-    max-height: 430px;  
-  }
-
-  @media ${device.desktop} {
-    display: flex;
-    max-width: 860px;
-    max-height: 990px;
-  }
-`;
-
-export const Info = styled.div`
-
-  @media ${device.laptop} {
+  .hero{
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: center;
+  }
+
+  h1 {
+    text-align: center;
+  }
+
+  p {
+    text-align: center;
+  }
+
+  li {
+    list-style-type: none;
+  }
+  .hero-image {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
   }
 
   @media ${device.desktop} {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    width: 900px;
-  }
-`;
 
-export const BrandName = styled.h1`
-  font-family: "Poppins", sans-serif;
-  font-weight: 700;
-  font-style: bold;
-  color: rgba(72, 23, 89, 1)
-`;
-
-export const BrandInfo = styled.p`
-font-family: "Prompt", sans-serif;
-font-weight: 400;  
-font-style: italic;
+  } 
 `;
 
 export const RemoveButton = styled.button`
