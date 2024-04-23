@@ -13,6 +13,7 @@ const size = {
 export const StoreStyledContainer = styled.div`
   display: flex
   flex-direction: row;
+  align-items: start;
   font-family: 'Poppins', sans-serif;  
   
   .spot-light{
@@ -94,8 +95,8 @@ export const StoreStyledContainer = styled.div`
       display: flex;
       justify-content: center;
       flex-direction: column;
-      height: 665px; 
-      }
+      height: 665px;
+    }
   
       .brand-spot-light {
         background-image: url('./images/goodSleep.png');
@@ -124,7 +125,7 @@ export const StoreStyledContainer = styled.div`
 
     .products-containers  {
       display: flex;
-      justify-content: space-between; 
+      justify-content: flex-start; 
       flex-direction: row;
     }
 

@@ -14,7 +14,8 @@ export const ListedProductCard = styled.div`
     display: flex;
     align-items: center;
     border: 2px solid #f5f5f5;
-    font-family: "Poppins", sans-serif;
+    height: 300px;
+    font-family: "Poppins", sans-serif; 
     
     .product-title{
         display: flex;
@@ -62,7 +63,7 @@ export const ListedProductCard = styled.div`
         }
         
         .add {
-            margin: 10px; 
+            margin: 10px 0px 10px 0px; 
             padding: 10px 30px 10px 30px;
             border: .5px solid grey;
             color: white;
@@ -101,13 +102,19 @@ export const ListedProductCard = styled.div`
     @media ${device.desktop} {
         display: flex;
         flex-direction: row;
-        width: 100%;
-        height: 100%;
+        justify-content: center;
+        padding 0px;
+        width: 600px;
+        height: 500px;
         background: white;
         
         .products-containers {
         }
         
+        // .card {
+        //     height: 300ps;
+        // }
+
         .image-container {
             width: auto;
             padding: 0px 20px 0px 0px;
