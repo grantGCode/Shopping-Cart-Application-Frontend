@@ -7,15 +7,7 @@ import { faCartShopping } from '@fortawesome/free-solid-svg-icons';
 /* Styling */
 import { ToastContainer } from 'react-bootstrap'
 import { toast } from 'react-toastify';
-import { RemoveButton } from '../Container.styled.js';
-import {
-  NavbarContainer,
-  ButtonCart,
-  YourCart,
-  Icon,
-  CartCount,
-  TitleContainer
-} from './Navbar.styles.js'
+import { NavbarContainer } from './Navbar.styles.js'
 import {
   ModalHeader,
   ModalContainer,
@@ -76,35 +68,24 @@ export default function NavBar() {
   };
   
   return (
-    <div> 
       <NavbarContainer>        
-        <TitleContainer>
-          <h1>S. S. S. C.</h1>
-          <p>
+        <div className='title-Container'>
+          <h1 className='acronym'>S. S. S. C.</h1>
+          <p className='full-name'>
             {"(Secure Swift Shopper's Cart)"}
           </p>
-        </TitleContainer>
-          <ButtonCart
-            onClick={openModal} // Open modal on button click
-          >
-            <YourCart> 
-              {'Your Cart '}
-            </YourCart>
-            <Icon> 
-              <FontAwesomeIcon icon={faCartShopping} /> 
-            </Icon>
-            <CartCount>
-              {`       (${cartItemCount})`}
-            </CartCount>
-          </ButtonCart>
+        </div>
+          <button className='open-cart-button' onClick={openModal}>
+            <p className='your-cart'>Your Cart</p> 
+            <FontAwesomeIcon className='cart-icon' icon={faCartShopping} />
+            <p className='item-count'>{`   (${cartItemCount})`}</p>
+          </button>
           <div>
             { Items.length === 0 ?
             (null) :
-            (<RemoveButton 
-              onClick={purgeShoppingCart}
-            >
+            (<button className='remove-button' onClick={purgeShoppingCart}>
               Remove All
-            </RemoveButton>)}
+            </button>)}
           </div>
           <div>
             { showModal === false ? 
@@ -150,9 +131,8 @@ export default function NavBar() {
               </ModalContent>
             </ModalContainer>)}
           </div>
-      </NavbarContainer>
       <ToastContainer />
-    </div>
+      </NavbarContainer>
   )
 }
 

@@ -1,9 +1,7 @@
-import { ShoppingCartContext, addOneToCart, removeOneItem } from '../../CartContext.js'
+import { ShoppingCartContext } from '../../CartContext.js'
 import { useContext } from 'react';
 import { toast } from 'react-toastify';
-import { 
-  ListedProductCard,
-} from './ProductCard.styled.js';
+import { ListedProductCard } from './ProductCard.styled.js';
 
 function ProductCard({product}) {
   const cartContext = useContext(ShoppingCartContext);
@@ -23,16 +21,16 @@ function ProductCard({product}) {
       <div class="image-container">
         <img 
           class="product-image"
-          src="/images/imageShrit.jpg" 
-          alt="image unavailable" 
+          src={product.img} 
+          alt="unavailable" 
         />
       </div>
       <div class="forum">
-        <div class="info-container">
-          <h1 class="product-title">Product Title</h1>
-          <p class="product-price">$Product Price</p>    
+        <div className="info-container">
+          <h1 className="product-title">{product.title}</h1>
+          <h5 className="product-price">{`$${product.cost}`}</h5>    
         </div>
-        <div class="button-container">
+        <div className="button-container">
           <button className='add' onClick={add}> + Add </button>
           <button className='remove' onClick={remove}> - Remove</button>
         </div>
