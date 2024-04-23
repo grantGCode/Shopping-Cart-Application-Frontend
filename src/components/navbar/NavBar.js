@@ -8,18 +8,7 @@ import { faCartShopping } from '@fortawesome/free-solid-svg-icons';
 import { ToastContainer } from 'react-bootstrap'
 import { toast } from 'react-toastify';
 import { NavbarContainer } from './Navbar.styles.js'
-import {
-  ModalHeader,
-  ModalContainer,
-  ModalContent,
-  ModalTitle,
-  ButtonClose,
-  ModalBody,
-  NoItems,
-  ModalFooter,
-  TotalCost,
-  ButtonPurchase
-} from './Modal.styles.js'
+import { ModalContainer } from './Modal.styles.js'
 
 export default function NavBar() {
   const [showModal, setShowModal] = useState(false);
@@ -91,20 +80,18 @@ export default function NavBar() {
             { showModal === false ? 
             (null) : 
             (<ModalContainer showModal={setShowModal}>
-              <ModalContent>
-                <ModalHeader>
-                  <ModalTitle>
+              <div className='modal-content'>
+                <div className='modal-header'>
+                  <h2 className='modal-title'>
                     Your Shopping Cart
-                  </ModalTitle>
-                  <ButtonClose
-                    onClick={closeModal} // Close modal on button click
-                  >
+                  </h2>
+                  <button className='close-modal' onClick={closeModal}>
                     X
-                  </ButtonClose>
-                </ModalHeader>                    
-                <ModalBody>
+                  </button>
+                </div>                    
+                <div className='modal-body'>
                   {Items.length === 0 ? (
-                    <NoItems>There are no items in your shopping cart.</NoItems>
+                    <h4 className='no-items'>There are no items in your shopping cart.</h4>
                     ) : Items.map((item) => 
                       ( <div> 
                         <ItemCard                   
@@ -114,21 +101,22 @@ export default function NavBar() {
                         />  
                       </div> ))
                     }
-                  </ModalBody>    
-                  <ModalFooter>
-                    <TotalCost>
+                  </div>    
+                  <div className='modal-footer'>
+                    <h2 className='total-cost'>
                       {`Total: $${getTotalCost()}`}
-                    </TotalCost>
-                    <ButtonPurchase 
+                    </h2>
+                    <button 
+                      className='button-purchase' 
                       onClick={() => {
                         toast.success('Possessing your order.');
                         buyCartContent();
                       }}
                     >
                       Purchase Items
-                    </ButtonPurchase>
-                </ModalFooter>
-              </ModalContent>
+                    </button>
+                </div>
+              </div>
             </ModalContainer>)}
           </div>
       <ToastContainer />
