@@ -68,7 +68,5 @@ export const ListedProductCard = styled.div`
         }
     }
 
-    @media ${device.desktop_xl} {
-        width: 700px;
-    }
+
 `;
