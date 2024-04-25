@@ -19,6 +19,7 @@ export const Form = styled.div`
 
     .card {
         display: flex;
+        flex-direction: row;
         justify-content: space-between;
         align-items: center;
         width: 100%;
@@ -46,7 +47,7 @@ export const Form = styled.div`
     }
 
     .remove-button {
-        width: 170px;
+        width: 210px;
         height: 40px;
         border-radius: 8px;
         font-family: "Prompt", sans-serif;

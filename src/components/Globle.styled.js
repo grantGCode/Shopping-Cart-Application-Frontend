@@ -60,9 +60,10 @@ export const StoreStyledContainer = styled.div`
   }
   
   @media ${device.mobile} {
-    
+
     li {
       list-style-type: none;
+      justify-content: center;
     }
 
     .remove-button {
@@ -124,14 +125,15 @@ export const StoreStyledContainer = styled.div`
     }
 
     .products-containers  {
+      border: 2px solid green;
       display: flex;
-      justify-content: flex-start; 
-      flex-direction: row;
+      justify-content: center;
     }
 
     li {
+      display: flex;
       list-style-type: none;
-      width: auto;
+      width: 400px;
     }
 
     .remove-button{

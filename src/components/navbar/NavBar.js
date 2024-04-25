@@ -20,12 +20,8 @@ export default function NavBar() {
   const closeModal = () => {
     setShowModal(false);
   };
-
   
   const {cartItemCount, Items, getTotalCost, purgeShoppingCart} = useShoppingCartContext()
-
-
-
 
   /* Purchase Items Button on click function*/
   const buyCartContent = async () => {

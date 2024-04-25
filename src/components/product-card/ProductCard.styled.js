@@ -11,10 +11,10 @@ export const device = {
 };
 
 export const ListedProductCard = styled.div`
+    // border: 2px solid blue;
     display: flex;
-    align-items: center;
-    border: 2px solid #f5f5f5;
-    height: 300px;
+    margin: 20px;
+    // border:  solid #f5f5f5;
     font-family: "Poppins", sans-serif; 
     
     .product-title{
@@ -27,16 +27,18 @@ export const ListedProductCard = styled.div`
     
     @media ${device.mobile} {
         flex-direction: column;
+        justify-content: center;
         align-items: center;
         padding: 20px;
         
         .image-container {
-            width: 50%;
+            width: 500px;
         }
         
         .product-image {
-            width: 100%;
-            height: 100%;
+            border: 2x solid red;
+            width: 50%;
+            height: 50%;
             object-fit: contain;
             border-radius: 6px;    
         }
@@ -107,13 +109,6 @@ export const ListedProductCard = styled.div`
         width: 600px;
         height: 500px;
         background: white;
-        
-        .products-containers {
-        }
-        
-        // .card {
-        //     height: 300ps;
-        // }
 
         .image-container {
             width: auto;

@@ -18,14 +18,14 @@ function ProductCard({product}) {
 
   return (
     <ListedProductCard>
-      <div class="image-container">
+      <div className="image-container">
         <img 
-          class="product-image"
+          className="product-image"
           src={product.img} 
           alt="unavailable" 
         />
       </div>
-      <div class="forum">
+      <div className="forum">
         <div className="info-container">
           <h1 className="product-title">{product.title}</h1>
           <h5 className="product-price">{`$${product.cost}`}</h5>    
