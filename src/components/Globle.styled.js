@@ -2,16 +2,19 @@ import styled from "styled-components";
 
 const size = {
     mobile:'375px',
-    desktop: '1024px'
+    desktop: '1024px',
+    desktop_xl: '1285px',
   }
   
   export const device = {
     mobile: `(min-width: ${size.mobile})`,
     desktop: `(min-width: ${size.desktop})`,
+    desktop_xl: `(min-width: ${size.desktop_xl})`,
   };
 
 export const StoreStyledContainer = styled.div`
-  display: flex
+  //default global is mobile
+  display: flex;
   flex-direction: row;
   align-items: start;
   font-family: 'Poppins', sans-serif;  
@@ -28,7 +31,7 @@ export const StoreStyledContainer = styled.div`
   .spot-light-pic{
     display: flex;
     justify-content: center;
-    hight: 500px;
+    height: 500px;
     max-width: 375px;
     color: white
   }
@@ -89,7 +92,10 @@ export const StoreStyledContainer = styled.div`
   }
 
   @media ${device.desktop} {
-    
+    //global
+    display: flex;
+    flex-direction: column;
+
     .spot-light {
       background-image: url('./images/beachSunSet.jpg');
       background-size: 100% 100%;
@@ -128,6 +134,7 @@ export const StoreStyledContainer = styled.div`
       border: 2px solid green;
       display: flex;
       justify-content: center;
+      flex-wrap: wrap;
     }
 
     li {
@@ -152,6 +159,13 @@ export const StoreStyledContainer = styled.div`
         border-radius: 6px;
         font-size: 15px;                
       }
+    }
+  }
+
+  //global for super wide monitors
+  @media ${device.desktop_xl} {
+    .products-containers {
+      width: 100%;
     }
   }
 
