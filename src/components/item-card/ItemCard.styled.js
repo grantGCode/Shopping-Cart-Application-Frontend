@@ -2,12 +2,10 @@ import styled from "styled-components";
 
 
 const size = {
-    mobile:'425px',
     desktop: '1024px',
 }
 
 export const device = {
-    mobile: `(min-width: ${size.mobile})`,
     desktop: `(min-width: ${size.desktop})`,
 };
 
@@ -55,7 +53,7 @@ export const Form = styled.div`
         font-style: normal;    
         color: rgba(247, 247, 247, 1);
         background-color: rgb(180, 180, 180);
-        border-color: rgba(63, 63, 63, 1)
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        border-color: rgba(63, 63, 63, 1);
+        box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
     }
 `;

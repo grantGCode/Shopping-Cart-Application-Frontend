@@ -1,12 +1,10 @@
 import styled from 'styled-components'
 
 const size = {
-    mobile:'375px',
     desktop: '1024px'
 };
 
 export const device = {
-    mobile: `(min-width: ${size.mobile})`,
     desktop: `(min-width: ${size.desktop})`,
 };
 
@@ -14,59 +12,58 @@ export const NavbarContainer = styled.nav`
     position: fixed;
     align-items: center;
     font-family: "Poppins", sans-serif;
+    bottom: 10%;
+    left: 31%;
     
     .cart-icon{ 
         text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
     }
 
-    @media ${device.mobile} {
-        bottom: 10%;
-        left: 31%;
     
-        .title-Container{
-            display: none;
-        }
-
-        .open-cart-button{        
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            text-align: center;                
-            padding: 5px 50px 5px; 46px;
-            height: 10%;
-            color: white;
-            background: linear-gradient(to bottom right,  #00BFFF, #00E0FF, #fdca55, #fe810b);
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
-            border-radius: 6px;
-            border: 2px solid ${props => 
-                props.borderColor || '#3498db'
-            };
-            
-            &:hover {
-                padding: 0px 39px 0px; 39px;
-                color: rgba(50, 50, 50); 
-                background: linear-gradient(to bottom right,  #fe810b, #fdca55, #00E0FF, #00BFFF); 
-                border: 2px solid ${props => 
-                    props.borderColor || 'rgb(128, 128, 128)'
-                };
-            }
-        }
-        
-        .your-cart{ 
-            display: none;
-        }
-        
-        
-        .item-count {
-            height: 7px;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
-        }
-
+    .title-Container{
+        display: none;
     }
+
+    .open-cart-button{        
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        text-align: center;                
+        padding: 5px 50px 5px 46px;
+        height: 10%;
+        color: white;
+        background: linear-gradient(to bottom right,  #00BFFF, #00E0FF, #fdca55, #fe810b);
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
+        border-radius: 6px;
+        border: 2px solid ${props => 
+            props.borderColor || '#3498db'
+        };
+            
+        &:hover {
+            padding: 0px 39px 0px 39px;
+            color: rgba(50, 50, 50); 
+            background: linear-gradient(to bottom right,  #fe810b, #fdca55, #00E0FF, #00BFFF); 
+            border: 2px solid ${props => 
+                props.borderColor || 'rgb(128, 128, 128)'
+            };
+        }
+    }
+        
+    .your-cart{ 
+        display: none;
+    }
+        
+        
+    .item-count {
+        height: 7px;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
+    }
+
+    
         
     @media ${device.desktop} { 
         display: flex;
-        align-item: center;
+        align-items: center;
         justify-content: end;
         top: 0;
         left: 0;
@@ -87,7 +84,7 @@ export const NavbarContainer = styled.nav`
             display: block;
             position: fixed;
             left: 0;
-            justify-content: start
+            justify-content: start;
             height: 10px;   
         }
         
@@ -126,7 +123,7 @@ export const NavbarContainer = styled.nav`
         
         .your-cart{
             display: block;
-            align-item: center;
+            align-items: center;
             margin-bottom: 0;
             padding: 0px 5px 0px 0px;
             font-size: 20px;
@@ -134,12 +131,12 @@ export const NavbarContainer = styled.nav`
         }
 
         .cart-icon {
-            align-item: center;
+            align-items: center;
             height: 20px;
         }
   
         .item-count {
-            margin-: 0px 0px 0px 0px;
+            margin: 0px 0px 0px 0px;
             padding-left: 2px;
             color: black;
             height: 20px;

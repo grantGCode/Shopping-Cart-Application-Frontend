@@ -1,7 +1,6 @@
 import styled from "styled-components";
 
 const size = {
-    mobile:'375px',
     desktop: '1024px'
 }
   
@@ -26,6 +25,7 @@ export const ModalContainer = styled.div`
         background: white;
         padding: 25px; 
         border-radius: 14px;        
+        width: 50%;
     }
 
     .modal-header {
@@ -47,6 +47,8 @@ export const ModalContainer = styled.div`
         background-color: transparent;
         border-color: transparent;
         font-style: bold;
+        font-weight: 400;
+        font-size: 1.75em;
     }
 
     .modal-footer {
@@ -57,6 +59,10 @@ export const ModalContainer = styled.div`
         padding-top: 20px;
         border-top: solid 1px gray;
     
+    }
+
+    .no-items {
+        padding: 25px;
     }
 
     .total-cost {
@@ -83,43 +89,6 @@ export const ModalContainer = styled.div`
                 props.borderColor || 'rgb(0, 0, 0)'
             };
         }
-    }
-
-    @media ${device.mobile} {
-        
-        .modal-content {
-            width: 100%;
-        }
-
-        .close-modal {
-            font-weight: 400;
-            font-size: 1.75em;
-        }
-
-        .no-items {
-            padding: 25px;
-        }
-        
-        .button-purchase {
-            width: 189px;
-            color: white;
-            background: linear-gradient(to bottom right, #0dcaf0, rgb(229, 229, 229));
-            font-size: 1.25em;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
-            border-radius: 8px;
-            border: 2px solid ${props => 
-                props.borderColor || 'gray'
-            };
-    
-            &:hover {
-                color: rgba(50, 50, 50); 
-                background: linear-gradient(to bottom right, #797979, #0CB0D1); 
-                border: 2px solid ${props => 
-                    props.borderColor || 'rgb(0, 0, 0)'
-                };
-            }
-        }
-    
     }
 
     @media ${device.desktop} {

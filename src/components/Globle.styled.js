@@ -1,13 +1,11 @@
 import styled from "styled-components";
 
 const size = {
-    mobile:'375px',
     desktop: '1024px',
     desktop_xl: '1285px',
   }
   
   export const device = {
-    mobile: `(min-width: ${size.mobile})`,
     desktop: `(min-width: ${size.desktop})`,
     desktop_xl: `(min-width: ${size.desktop_xl})`,
   };
@@ -15,7 +13,7 @@ const size = {
 export const StoreStyledContainer = styled.div`
   //default global is mobile
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   align-items: start;
   font-family: 'Poppins', sans-serif;  
   
@@ -46,6 +44,11 @@ export const StoreStyledContainer = styled.div`
     font-style: normal;   
   }
 
+  li {
+      list-style-type: none;
+      justify-content: center;
+    }
+
   p {
     font-family: 'Poppins', sans-serif;
     font-weight: 500;
@@ -62,32 +65,24 @@ export const StoreStyledContainer = styled.div`
     background: black;
   }
   
-  @media ${device.mobile} {
-
-    li {
-      list-style-type: none;
-      justify-content: center;
-    }
-
-    .remove-button {
-      display: flex;
-      flex-direction: row;
-      justify-content: center;
-      align-items: center;
-      font-family: "Prompt", sans-serif;
-      font-size:15px;
-      margin-top: 20px;
-      padding: 5px 31px 5px 31px;
-      color: white; 
-      background: red;
-      border: 2px solid black;
-      border-radius: 6px;
-    
-      &:hover {
-        background: rgba(83, 83, 83, 1);
-        border: 2px solid rgba(0.231, 0.231, 0.231, 1);
-        border-radius: 6px;                
-      }
+  .remove-button {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    font-family: "Prompt", sans-serif;
+    font-size:15px;
+    margin-top: 20px;
+    padding: 5px 31px 5px 31px;
+    color: white; 
+    background: red;
+    border: 2px solid black;
+    border-radius: 6px;
+  
+    &:hover {
+      background: rgba(83, 83, 83, 1);
+      border: 2px solid rgba(0.231, 0.231, 0.231, 1);
+      border-radius: 6px;                
     }
   }
 
