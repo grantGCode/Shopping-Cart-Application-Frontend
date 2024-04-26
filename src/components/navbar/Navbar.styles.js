@@ -58,12 +58,10 @@ export const NavbarContainer = styled.nav`
         height: 7px;
         text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
     }
-
-    
         
     @media ${device.desktop} { 
         display: flex;
-        align-items: center;
+        align-items: start;
         justify-content: end;
         top: 0;
         left: 0;

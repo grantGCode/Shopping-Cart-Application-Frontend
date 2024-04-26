@@ -15,7 +15,7 @@ export const StoreStyledContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: start;
-  font-family: 'Poppins', sans-serif;  
+  font-family: 'Poppins', sans-serif;
   
   .spot-light{
     background-image: url('./images/beachSunSet.jpg');
@@ -24,14 +24,8 @@ export const StoreStyledContainer = styled.div`
     justify-content: center;
     flex-direction: column;
     height: 235px;
-  }
-    
-  .spot-light-pic{
-    display: flex;
-    justify-content: center;
-    height: 500px;
-    max-width: 375px;
-    color: white
+    width: auto;
+    /* height: 500px; */
   }
 
   .summer {
@@ -57,14 +51,6 @@ export const StoreStyledContainer = styled.div`
     color: white
   }
   
-  .footer {
-    display: flex;
-    justify-content: center;
-    color: white;
-    padding: 59px;
-    background: black;
-  }
-  
   .remove-button {
     display: flex;
     flex-direction: row;
@@ -78,14 +64,23 @@ export const StoreStyledContainer = styled.div`
     background: red;
     border: 2px solid black;
     border-radius: 6px;
-  
+    
     &:hover {
       background: rgba(83, 83, 83, 1);
       border: 2px solid rgba(0.231, 0.231, 0.231, 1);
       border-radius: 6px;                
     }
   }
-
+  
+  .footer {
+    display: flex;
+    justify-content: center;
+    color: white;
+    padding: 59px;
+    background: black;
+    width: 100%;
+  }
+  
   @media ${device.desktop} {
     //global
     display: flex;
@@ -98,6 +93,7 @@ export const StoreStyledContainer = styled.div`
       justify-content: center;
       flex-direction: column;
       height: 665px;
+      width: auto;  
     }
   
       .brand-spot-light {
@@ -126,10 +122,9 @@ export const StoreStyledContainer = styled.div`
     }
 
     .products-containers  {
-      border: 2px solid green;
       display: flex;
       justify-content: center;
-      flex-wrap: wrap;
+      flex-wrap: wrap;    
     }
 
     li {
@@ -159,8 +154,17 @@ export const StoreStyledContainer = styled.div`
 
   //global for super wide monitors
   @media ${device.desktop_xl} {
+
+    .spot-light {
+      height: 900px;
+      width: 2560px;
+    }
     .products-containers {
-      width: 100%;
+      height: 900px;
+      width: 2560px;
+    }
+    .footer {
+      width: 2560px;      
     }
   }
 
