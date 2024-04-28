@@ -23,9 +23,9 @@ export const StoreStyledContainer = styled.div`
     display: flex;
     justify-content: center;
     flex-direction: column;
-    height: 235px;
-    width: auto;
-    /* height: 500px; */
+    height: 300px;
+    width: 100%;
+    height: 500px;
   }
 
   .summer {
@@ -33,14 +33,22 @@ export const StoreStyledContainer = styled.div`
     justify-content: center;
     text-align: center;
     color: white;
+    padding: 0px 10px 0px 10px;
     font-family: 'Poppins', sans-serif;   
     font-weight: 500;
     font-style: normal;   
+  } 
+
+  .products-containers  {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;    
   }
 
   li {
       list-style-type: none;
       justify-content: center;
+      margin: 0px 5px 0px 5px;
     }
 
   p {
@@ -92,7 +100,7 @@ export const StoreStyledContainer = styled.div`
       display: flex;
       justify-content: center;
       flex-direction: column;
-      height: 665px;
+      height: 700px;
       width: auto;  
     }
   
@@ -105,7 +113,7 @@ export const StoreStyledContainer = styled.div`
         display: flex;
         justify-content: start;
         text-align: center;
-        padding-left: 70px;
+        padding: 0px 70px 0px 70px;
         color: white;
         font-family: 'Poppins', sans-serif;   
         font-weight: 700;
@@ -117,7 +125,7 @@ export const StoreStyledContainer = styled.div`
       font-weight: 700;
       font-style: normal;
       text-align: start;
-      padding-left: 70px;
+      padding: 0px 70px 0px 70px;
       color: white
     }
 
@@ -156,15 +164,16 @@ export const StoreStyledContainer = styled.div`
   @media ${device.desktop_xl} {
 
     .spot-light {
-      height: 900px;
-      width: 2560px;
+      height: 800px;
+      width: 1565px;
     }
     .products-containers {
-      height: 900px;
-      width: 2560px;
+      height: auto;
+      width: auto;
     }
+ 
     .footer {
-      width: 2560px;      
+      width: 100%;
     }
   }
 

@@ -1,11 +1,14 @@
 import styled from 'styled-components'
 
 const size = {
-    desktop: '1024px'
+    desktop: '1024px',
+    desktop_xl: '1285px',
+
 };
 
 export const device = {
     desktop: `(min-width: ${size.desktop})`,
+    desktop_xl: `(min-width: ${size.desktop_xl})`,    
 };
 
 export const NavbarContainer = styled.nav`
