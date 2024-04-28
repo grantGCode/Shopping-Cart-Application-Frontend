@@ -72,7 +72,7 @@ export const NavbarContainer = styled.nav`
         position: fixed;
         color: black;
         background: white;
-        height: 18%;
+        height: 85px;
         width: 100%;        
             
         .summer {
@@ -114,7 +114,7 @@ export const NavbarContainer = styled.nav`
             background: rgba(255, 255, 255, .975);
             bottom: 0;
             border: none;
-            color: Black;
+            color: black;
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.125);
                 
             &:hover {
@@ -157,7 +157,7 @@ export const NavbarContainer = styled.nav`
         position: fixed;
         color: black;
         background: rgba(255, 255, 255, .975);
-        height: 20%;
-        width: 33%;
+        height: 85px;
+        width: 100%;
     }
 `;

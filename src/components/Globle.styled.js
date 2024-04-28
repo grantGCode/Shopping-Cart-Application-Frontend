@@ -99,24 +99,19 @@ export const StoreStyledContainer = styled.div`
       display: flex;
       justify-content: center;
       flex-direction: column;
-      height: 700px;
+      height: 350px;
       width: auto;  
     }
-  
-      .brand-spot-light {
-        background-image: url('./images/goodSleep.png');
-        width: 100px
-      }
 
-      .summer {
-        display: flex;
-        justify-content: start;
-        text-align: center;
-        padding: 0px 70px 0px 70px;
-        color: white;
-        font-family: 'Poppins', sans-serif;   
-        font-weight: 700;
-        font-style: normal;   
+    .summer {
+      display: flex;
+      justify-content: start;
+      text-align: center;
+      padding: 0px 70px 0px 70px;
+      color: white;
+      font-family: 'Poppins', sans-serif;   
+      font-weight: 700;
+      font-style: normal;   
       }
     
     p {
@@ -170,9 +165,11 @@ export const StoreStyledContainer = styled.div`
 
   //global for super wide monitors
   @media ${device.desktop_xl} {
-    
+    display: flex;
+    flex-direction: column;
+   
     .spot-light {
-      height: 800px;
+      height: 650px;
       width: 2560px;
     }
     .products-containers {
@@ -181,10 +178,11 @@ export const StoreStyledContainer = styled.div`
       flex-wrap: wrap;  
       height: auto;
       width: auto;
+      margin-left: 10%;
     }
  
     .footer {
-      width: 10%;
+      width: 100%;
     }
   }
 
