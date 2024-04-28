@@ -157,26 +157,34 @@ export const StoreStyledContainer = styled.div`
         font-size: 15px;                
       }
     }
+
+    .footer {
+      display: flex;
+      justify-content: center;
+      color: white;
+      padding: 59px;
+      background: black;
+      width: 100%;
+    }
   }
 
   //global for super wide monitors
   @media ${device.desktop_xl} {
-
+    
     .spot-light {
       height: 800px;
-      width: 1920px;
+      width: 2560px;
     }
     .products-containers {
       display: flex;
       justify-content: center;
-      flex-wrap: wrap;    
-      /* margin-left: 10%; */
+      flex-wrap: wrap;  
       height: auto;
       width: auto;
     }
  
     .footer {
-      /* width: 100%; */
+      width: 10%;
     }
   }
 

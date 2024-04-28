@@ -158,6 +158,6 @@ export const NavbarContainer = styled.nav`
         color: black;
         background: rgba(255, 255, 255, .975);
         height: 20%;
-        width: 100%;
+        width: 33%;
     }
 `;
