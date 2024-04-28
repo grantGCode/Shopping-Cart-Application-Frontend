@@ -13,10 +13,10 @@ export const device = {
 
 export const NavbarContainer = styled.nav`
     position: fixed;
-    align-items: center;
+    align-items: end;
     font-family: "Poppins", sans-serif;
     bottom: 10%;
-    left: 31%;
+    left: 35%;
     
     .cart-icon{ 
         text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
@@ -31,8 +31,9 @@ export const NavbarContainer = styled.nav`
         display: flex;
         justify-content: space-between;
         align-items: center;
-        text-align: center;                
-        padding: 5px 50px 5px 46px;
+        text-align: center;       
+        margin: 10px 10px 10px 10px;
+        padding: 15px 35px 15px 35px ;
         height: 10%;
         color: white;
         background: linear-gradient(to bottom right,  #00BFFF, #00E0FF, #fdca55, #fe810b);
@@ -59,7 +60,7 @@ export const NavbarContainer = styled.nav`
         
     .item-count {
         height: 7px;
-        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
+        /* text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25); */
     }
         
     @media ${device.desktop} { 
@@ -71,7 +72,7 @@ export const NavbarContainer = styled.nav`
         position: fixed;
         color: black;
         background: white;
-        height: 10%;
+        height: 18%;
         width: 100%;        
             
         .summer {
@@ -107,9 +108,10 @@ export const NavbarContainer = styled.nav`
         .open-cart-button {
             display: flex;
             justify-content: end;
-            padding: 0px 30px 0px 30px;
+            margin: 20px 10px 10px 10px;
+            padding: 15px 30px 15px 30px ;
             height: 40px;
-            background: transparent;
+            background: rgba(255, 255, 255, .975);
             bottom: 0;
             border: none;
             color: Black;
@@ -138,12 +140,24 @@ export const NavbarContainer = styled.nav`
   
         .item-count {
             margin: 0px 0px 0px 0px;
-            padding-left: 2px;
+            padding: 0px 0px 0px 8px;
             color: black;
-            height: 20px;
+            height: 37px;
             font-size: 23px;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
         }
 
+    }
+
+    @media ${device.desktop_xl} {
+        display: flex;
+        align-items: start;
+        justify-content: end;
+        top: 0;
+        left: 0;
+        position: fixed;
+        color: black;
+        background: rgba(255, 255, 255, .975);
+        height: 20%;
+        width: 100%;
     }
 `;

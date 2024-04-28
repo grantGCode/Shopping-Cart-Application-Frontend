@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 const size = {
     desktop: '1024px',
-    desktop_xl: '1285px',
+    desktop_xl: '2560px',
   }
   
   export const device = {
@@ -23,7 +23,6 @@ export const StoreStyledContainer = styled.div`
     display: flex;
     justify-content: center;
     flex-direction: column;
-    height: 300px;
     width: 100%;
     height: 500px;
   }
@@ -66,8 +65,8 @@ export const StoreStyledContainer = styled.div`
     align-items: center;
     font-family: "Prompt", sans-serif;
     font-size:15px;
-    margin-top: 20px;
-    padding: 5px 31px 5px 31px;
+    margin: 20px 10px 10px 10px;
+    padding: 15px;
     color: white; 
     background: red;
     border: 2px solid black;
@@ -142,7 +141,7 @@ export const StoreStyledContainer = styled.div`
     }
 
     .remove-button{
-      margin: 0px 0px 0px 0px;
+      margin: 20px 0px 0px 0px;
       padding: 5px 30px 5px 30px;
       color: black;
       font-size: 20px;
@@ -165,15 +164,19 @@ export const StoreStyledContainer = styled.div`
 
     .spot-light {
       height: 800px;
-      width: 1565px;
+      width: 1920px;
     }
     .products-containers {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;    
+      /* margin-left: 10%; */
       height: auto;
       width: auto;
     }
  
     .footer {
-      width: 100%;
+      /* width: 100%; */
     }
   }
 
