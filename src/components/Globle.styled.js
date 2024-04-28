@@ -2,12 +2,13 @@ import styled from "styled-components";
 
 const size = {
     desktop: '1024px',
-    desktop_xl: '2560px',
+    desktop_xl_min: '1440px',
+    desktop_xl_max: '2560px',
   }
   
   export const device = {
     desktop: `(min-width: ${size.desktop})`,
-    desktop_xl: `(min-width: ${size.desktop_xl})`,
+    desktop_xl: `((min-width: ${size.desktop_xl_min}) and (max-width: ${size.desktop_xl_max}))`,
   };
 
 export const StoreStyledContainer = styled.div`
@@ -99,7 +100,7 @@ export const StoreStyledContainer = styled.div`
       display: flex;
       justify-content: center;
       flex-direction: column;
-      height: 350px;
+      height: 500px;
       width: auto;  
     }
 
@@ -169,7 +170,8 @@ export const StoreStyledContainer = styled.div`
     flex-direction: column;
    
     .spot-light {
-      height: 650px;
+      background-size: 100% 100%;
+      height: 880px;
       width: 2560px;
     }
     .products-containers {
@@ -178,7 +180,7 @@ export const StoreStyledContainer = styled.div`
       flex-wrap: wrap;  
       height: auto;
       width: auto;
-      margin-left: 10%;
+      /* margin-left: 10%; */
     }
  
     .footer {
