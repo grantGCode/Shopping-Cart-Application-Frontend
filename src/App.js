@@ -15,9 +15,7 @@ function App() {
         <Routes>
           <Route 
             exact path='/' 
-            element={
-              <Store />
-            }
+            element={<Store />}
           ></Route>  
           <Route path='/success' element={<Success />} />
           <Route path='/cancel' element={<Cancel />} />
