@@ -13,15 +13,22 @@ export const StoreStyledContainer = styled.div`
   @font-face {
     font-family: "Libre";
     src: url('./fonts/LibreBaskerville-Regular.ttf') format('truetype');
+    font-family: "Libre-Bold";
+    src: url('./fonts/LibreBaskerville-Bold.ttf') format('truetype');
+    font-family: "Libre-Italic";
+    src: url('./fonts/LibreBaskerville-Italic.ttf') format('truetype');
   }
 
   background-color: #f5f5f5;
-  border: 1px solid red;
-  padding: 20px;
+  padding: 20px 20px 0 20px;
   
-  .header, .header-two, .header-description {
-    font-family: "Libre", sans-serif;
+  .header, .header-two {
+    font-family: "Libre-Bold", sans-serif;
     text-align: center;
+  }
+
+  .header, .header-two {
+    padding: 0 20px;
   }
 
   .header {
@@ -30,6 +37,20 @@ export const StoreStyledContainer = styled.div`
 
   .header-two {
     font-size: 45px;
+    font-family: "Libre-Bold", sans-serif;
+  }
+
+  .header-description {
+    font-family: "Libre", sans-serif;
+    text-align: center;
+  }
+
+  .red {
+     color: #BB2728; 
+  }
+
+  .skinny {
+      font-family: "Libre-Italic", sans-serif;
   }
 
   .header-description {
@@ -42,28 +63,6 @@ export const StoreStyledContainer = styled.div`
     justify-content: center;
     align-items: center;
     list-style-type: none;
-  }
-
-  .footer {
-    background-color: black;
-    background-image: url('./images/ivan-jevtic-cutout.png');
-    font-family: "Libre", sans-serif;
-    height: 240px;
-    padding: 40px;
-    color: white;
-  }
-
-  .footer-title {
-    font-size: 18px;
-  }
-
-  .footer-description {
-    padding-top: 10px;
-    font-size: 10px;
-  }
-
-  .footer-copyright {
-    font-size: 10px;
   }
 
   @media ${device.desktop} {
