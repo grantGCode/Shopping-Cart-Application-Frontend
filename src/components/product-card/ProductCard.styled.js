@@ -102,7 +102,7 @@ export const ProductCardStyles = styled.div`
     }
 
     @media ${device.desktop} {
+        margin-right: 25px;
     }
-
 
 `;

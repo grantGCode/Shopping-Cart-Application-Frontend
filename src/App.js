@@ -28,7 +28,7 @@ function App() {
               exact path='/' 
               element={
                 <>
-                  <Navbar />
+                  {/* <Navbar /> */}
                   <Store />
                   <div className='footer'>
                     <h3 className='footer-title'>Pulchra Rosa</h3>

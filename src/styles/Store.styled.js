@@ -1,4 +1,13 @@
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
+
+const moveBackground = keyframes`
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 1000px 0;
+  }
+`;
 
 const size = {
     desktop: '1280px',
@@ -19,8 +28,11 @@ export const StoreStyledContainer = styled.div`
     src: url('./fonts/LibreBaskerville-Italic.ttf') format('truetype');
   }
 
-  background-color: #f5f5f5;
   padding: 20px 20px 0 20px;
+
+  .top-image-container {
+    display: none;
+  }
   
   .header, .header-two {
     font-family: "Libre-Bold", sans-serif;
@@ -66,5 +78,41 @@ export const StoreStyledContainer = styled.div`
   }
 
   @media ${device.desktop} {
+
+    background-image: url('./images/rosa-background-logo.svg');
+    background-size: cover;
+    animation: ${moveBackground} 90s ease-in-out infinite;
+    padding: 0px;
+    display: flex;
+    justify-content: center;
+
+    .top-image-container {
+      display: block;
+    }
+
+    .header, .header-two, .header-description {
+      text-align: left;
+      padding: 0px;
+    }
+
+    .store-container {
+      max-width: 1280px;
+      display: flex;
+    }
+
+    .spot-light-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding-right: 50px;
+    }
+
+    .products-container {
+      flex-direction: row;
+    }
+
+    .bottom-image-container{
+      display: none;
+    }
   }
 `;

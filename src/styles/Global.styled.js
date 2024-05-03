@@ -1,6 +1,9 @@
 import styled from 'styled-components';
 
 export const GlobalStyledContainer = styled.div`
+
+    background-color: #f5f5f5;
+    
     .footer {
         background-color: black;
         background-image: url('./images/ivan-jevtic-cutout.png');
