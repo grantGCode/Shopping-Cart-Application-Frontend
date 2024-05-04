@@ -106,7 +106,7 @@ export default function NavBar() {
                           buyCartContent();
                         }}
                       >
-                        Purchase Items
+                        Check Out
                       </button>
                   </div>
                 </div>

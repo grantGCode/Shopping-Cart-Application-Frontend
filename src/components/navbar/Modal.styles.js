@@ -5,7 +5,6 @@ const size = {
 }
   
 export const device = {
-    mobile: `(min-width: ${size.mobile})`,
     desktop: `(min-width: ${size.desktop})`,
 };
 
@@ -25,7 +24,7 @@ export const ModalContainer = styled.div`
         background: #00161E;
         padding: 25px; 
         border-radius: 14px;        
-        width: 50%;
+        max-width: 430px;
     }
 
     .modal-header {
@@ -35,11 +34,12 @@ export const ModalContainer = styled.div`
         color: #FFFFFF;
         margin-bottom: 10px;
         padding-bottom: 15px;
-        border-bottom: solid 1px gray;    
+        border-bottom: solid 2px #FFFFFF;
+
     }
 
     .modal-title {
-        font-weight: 500;
+        font-weight: 600;
         font-style: normal;
         font-size: 1.75em;
     }
@@ -48,8 +48,7 @@ export const ModalContainer = styled.div`
         color: #FFFFFF;
         background-color: transparent;
         border-color: transparent;
-        font-style: bold;
-        font-weight: 400;
+        font-weight: 300;
         font-size: 1.75em;
     }
 
@@ -58,14 +57,15 @@ export const ModalContainer = styled.div`
         justify-content: space-between;
         align-items: center;
         color: #FFFFFF;
+        
         margin-top: 10px;
         padding-top: 20px;
-        border-top: solid 1px gray;
+        border-top: solid 2px #FFFFFF;
     
     }
 
     .no-items {
-        padding: 25px;
+        color: #FFFFFF;
     }
 
     .total-cost {
@@ -92,39 +92,9 @@ export const ModalContainer = styled.div`
 
     @media ${device.desktop} {
         
-        .modal-content {
-            width: 50%;
-        }
-
-        .no-items {
-            padding: 75px;
-        }
-        
         .close-modal {
             font-weight: 700;
             font-size: 2em;
-        }
-
-        .button-purchase {
-            width: 14%;
-            height: 30%;
-            color: white;
-            background: linear-gradient(to bottom right, #0dcaf0, rgb(229, 229, 229));
-            font-size: 1.25em;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
-            border-radius: 8px;
-            border: 2px solid ${props => 
-                props.borderColor || 'gray'
-            };
-    
-            &:hover {
-                color: rgba(50, 50, 50); 
-                background: linear-gradient(to bottom right, #797979, #0CB0D1); 
-                border: 2px solid ${props => 
-                    props.borderColor || 'rgb(0, 0, 0)'
-                };
-            }
-        }
-    
+        }    
     }
 `;
