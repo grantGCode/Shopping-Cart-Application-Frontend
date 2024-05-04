@@ -18,16 +18,6 @@ export const device = {
 };
 
 export const StoreStyledContainer = styled.div`
-
-  @font-face {
-    font-family: "Libre";
-    src: url('./fonts/LibreBaskerville-Regular.ttf') format('truetype');
-    font-family: "Libre-Bold";
-    src: url('./fonts/LibreBaskerville-Bold.ttf') format('truetype');
-    font-family: "Libre-Italic";
-    src: url('./fonts/LibreBaskerville-Italic.ttf') format('truetype');
-  }
-
   padding: 20px 20px 0 20px;
 
   .top-image-container {
@@ -39,7 +29,7 @@ export const StoreStyledContainer = styled.div`
     text-align: center;
   }
 
-  .header, .header-two {
+  .header, .header-two, .header-description {
     padding: 0 20px;
   }
 
@@ -77,6 +67,11 @@ export const StoreStyledContainer = styled.div`
     list-style-type: none;
   }
 
+  .bottom-image-container {
+    display: flex;
+    justify-content: center;
+  }
+
   @media ${device.desktop} {
 
     background-image: url('./images/rosa-background-logo.svg');
@@ -92,7 +87,7 @@ export const StoreStyledContainer = styled.div`
 
     .header, .header-two, .header-description {
       text-align: left;
-      padding: 0px;
+      padding: 5px;
     }
 
     .store-container {
@@ -105,6 +100,7 @@ export const StoreStyledContainer = styled.div`
       justify-content: center;
       align-items: center;
       padding-right: 50px;
+      width: 25%;
     }
 
     .products-container {
