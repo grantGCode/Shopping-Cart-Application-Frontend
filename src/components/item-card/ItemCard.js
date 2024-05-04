@@ -18,7 +18,7 @@ function ItemCard({item}) {
                 <button className="remove-button"
                     onClick={() => {cartContext.removeOneItem(item)}}
                 >
-                    - Remove From Cart
+                    Remove
                 </button>
             </div>
         </Form>
