@@ -99,6 +99,7 @@ export const ProductCardStyles = styled.div`
         font-size: 20px;
         font-weight: 700;
         padding-left: 5px;
+        padding-right: 5px;
     }
 
     @media ${device.desktop} {
