@@ -14,7 +14,7 @@ function Store() {
     <StoreStyledContainer>
       <div className="store-container">
         <div className='top-image-container'>
-          <img src='./images/aiony-haust-cutout.png'></img>
+          <img src='./images/aiony-haust-cutout.png' alt='unavailable'></img>
         </div>
         <div className='spot-light-container'>
           <div className='spot-light'>
