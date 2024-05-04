@@ -2,10 +2,11 @@ import styled from "styled-components";
 
 
 const size = {
-    desktop: '1024px',
+    desktop: '1440px',
 }
 
 export const device = {
+
     desktop: `(min-width: ${size.desktop})`,
 };
 
@@ -21,39 +22,35 @@ export const Form = styled.div`
         justify-content: space-between;
         align-items: center;
         width: 100%;
-        border: 2px solid gray;
-        margin-bottom: 6px;
-        padding: 5px    
+        background-color: #00161E;
+        margin-bottom: 10px;
     }
 
     .info {
         display: flex;
         justify-content: space-between;
         flex-direction: column;
-        padding-left: 10px;
-        padding-right: 40px;
     }
 
     .title {
-        font-weight: 700;
+        font-size: 1em;
         font-style: normal;
+        color: #FFFFFF;
     }
 
     .quantity {
-        font-weight: 700;
+        font-size: 1em;
         font-style: normal;
+        color: #FFFFFF;
     }
 
     .remove-button {
-        width: 210px;
-        height: 40px;
-        border-radius: 8px;
-        font-family: "Prompt", sans-serif;
-        font-weight: 700;
+        font-size: 1em;
         font-style: normal;    
+        height: 40px;
         color: rgba(247, 247, 247, 1);
-        background-color: rgb(180, 180, 180);
-        border-color: rgba(63, 63, 63, 1);
+        background-color: transparent;
+        border-color: #BB2728;
         box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
     }
 `;

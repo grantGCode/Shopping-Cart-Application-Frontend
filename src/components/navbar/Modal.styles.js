@@ -5,7 +5,6 @@ const size = {
 }
   
 export const device = {
-    mobile: `(min-width: ${size.mobile})`,
     desktop: `(min-width: ${size.desktop})`,
 };
 
@@ -22,32 +21,34 @@ export const ModalContainer = styled.div`
     font-family: 'Poppins', sans-serif;
 
     .modal-content {
-        background: white;
+        background: #00161E;
         padding: 25px; 
         border-radius: 14px;        
-        width: 50%;
+        max-width: 430px;
     }
 
     .modal-header {
         display: flex;
         justify-content: space-between;
         align-items: start;
+        color: #FFFFFF;
         margin-bottom: 10px;
         padding-bottom: 15px;
-        border-bottom: solid 1px gray;    
+        border-bottom: solid 2px #FFFFFF;
+
     }
 
     .modal-title {
-        font-weight: 500;
+        font-weight: 600;
         font-style: normal;
         font-size: 1.75em;
     }
 
     .close-modal{
+        color: #FFFFFF;
         background-color: transparent;
         border-color: transparent;
-        font-style: bold;
-        font-weight: 400;
+        font-weight: 300;
         font-size: 1.75em;
     }
 
@@ -55,14 +56,16 @@ export const ModalContainer = styled.div`
         display: flex;
         justify-content: space-between;
         align-items: center;
+        color: #FFFFFF;
+        
         margin-top: 10px;
         padding-top: 20px;
-        border-top: solid 1px gray;
+        border-top: solid 2px #FFFFFF;
     
     }
 
     .no-items {
-        padding: 25px;
+        color: #FFFFFF;
     }
 
     .total-cost {
@@ -71,61 +74,27 @@ export const ModalContainer = styled.div`
     }
 
     .button-purchase {
-        width: 54%;
+        border: 2px solid #4BEF11;
+        font-size: 1.25em;
+        width: 35%;
         height: 30%;
         color: white;
-        background: linear-gradient(to bottom right, #0dcaf0, rgb(229, 229, 229));
-        font-size: 1.25em;
         text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
-        border-radius: 8px;
-        border: 2px solid ${props => 
-            props.borderColor || 'gray'
-        };
-
+        background: transparent;
+        
         &:hover {
-            color: rgba(50, 50, 50); 
-            background: linear-gradient(to bottom right, #797979, #0CB0D1); 
-            border: 2px solid ${props => 
-                props.borderColor || 'rgb(0, 0, 0)'
-            };
-        }
+            color: black;
+            background: white; 
+            border:2px solid #4BEF11;
+        };
+            
     }
 
     @media ${device.desktop} {
         
-        .modal-content {
-            width: 50%;
-        }
-
-        .no-items {
-            padding: 75px;
-        }
-        
         .close-modal {
             font-weight: 700;
             font-size: 2em;
-        }
-
-        .button-purchase {
-            width: 14%;
-            height: 30%;
-            color: white;
-            background: linear-gradient(to bottom right, #0dcaf0, rgb(229, 229, 229));
-            font-size: 1.25em;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
-            border-radius: 8px;
-            border: 2px solid ${props => 
-                props.borderColor || 'gray'
-            };
-    
-            &:hover {
-                color: rgba(50, 50, 50); 
-                background: linear-gradient(to bottom right, #797979, #0CB0D1); 
-                border: 2px solid ${props => 
-                    props.borderColor || 'rgb(0, 0, 0)'
-                };
-            }
-        }
-    
+        }    
     }
 `;
