@@ -1,12 +1,15 @@
-# Secure Swift Shopper's Cart - (Frontend)
+# 🛒 Secure Swift Shopper's Cart - (Frontend)
 
 ## Description
 
 This is a online shopping cart application for customers to purchase one or multiple, of various the same products. 
-Offered by any online merchant who implements it into their website or online store. With the benifit
+Offered by any online merchant who implements it into their website or online store. 
  
-This project was created with `Node.js`
+The project was created with `React.JS` `Node & Express.JS` and styled with `styled-components`. The payment is portal powered by custom API that connects to `Stripe` to enable secure payment processing for the customer.
 
+## System Design for the Shopping Cart
+
+![System Design Diagram](./documents/system-design-for-shopping-cart.png)
 
 ## Getting started
 
@@ -41,10 +44,6 @@ This project was created with `Node.js`
 1. Clone this repository
 2. Install all dependencies using `npm install`.
 3. Run `npm start` to run the application locally  on `port 3000` as default port.
-
-
-<!-- ## How a user will buy a product -->
-
 
 
 ## Road map
