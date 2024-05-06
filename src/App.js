@@ -10,13 +10,8 @@ import Success from './pages/Success.jsx'
 import Navbar from './components/navbar/NavBar.js'
 
 import 'bootstrap/dist/css/bootstrap.min.css'
-import { loremIpsum } from 'lorem-ipsum'
 
-const loremText = loremIpsum({
-  count: 2,
-  units: 'sentences',
-  format: 'plain',
-});
+const credits = 'Photos By: @ivanjevtic_, @frankyfloress, @aiony, @alireza.d.o';
 
 function App() {
   return (
@@ -35,7 +30,7 @@ function App() {
                     <div className='footer-position-container'>
                       <div className='footer-container-1'>
                         <h3 className='footer-title'>Pulchra Rosa</h3>
-                        <p className='footer-description'>{loremText}</p>
+                        <p className='footer-description'>{credits}</p>
                       </div>
                       <div className='footer-container-2'>
                         <span className='footer-copyright'>© Copyright 2024 . Rights Reserved</span>

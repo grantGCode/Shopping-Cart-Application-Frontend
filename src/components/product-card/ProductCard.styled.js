@@ -81,6 +81,10 @@ export const ProductCardStyles = styled.div`
         border: none;
     }
 
+    .cta-button:hover {
+        background-color: #7c1a1c;
+    }
+
     .add, .remove {
         font-size: 10px;
         font-weight: bold;
@@ -100,6 +104,10 @@ export const ProductCardStyles = styled.div`
         font-weight: 700;
         padding-left: 5px;
         padding-right: 5px;
+    }
+
+    .close-out-x:hover {
+        cursor: pointer;    
     }
 
     @media ${device.desktop} {
