@@ -21,10 +21,11 @@ export const ModalContainer = styled.div`
     font-family: 'Poppins', sans-serif;
 
     .modal-content {
-        background: #00161E;
-        padding: 25px; 
-        border-radius: 14px;        
+        background: black;
+        padding: 25px;        
         max-width: 430px;
+        border: 1px solid white;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
     }
 
     .modal-header {
