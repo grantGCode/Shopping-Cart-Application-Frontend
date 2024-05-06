@@ -74,7 +74,7 @@ export const ModalContainer = styled.div`
     }
 
     .button-purchase {
-        border: 2px solid #4BEF11;
+        border: 1px solid #4BEF11;
         font-size: 1.25em;
         width: 35%;
         height: 30%;
@@ -85,7 +85,7 @@ export const ModalContainer = styled.div`
         &:hover {
             color: black;
             background: white; 
-            border:2px solid #4BEF11;
+            border: 1px solid #4BEF11;
         };
             
     }

@@ -44,13 +44,19 @@ export const Form = styled.div`
         color: #FFFFFF;
     }
 
-    .remove-button {
+    .remove-button-item {
         font-size: 1em;
         font-style: normal;    
         height: 40px;
         color: rgba(247, 247, 247, 1);
         background-color: transparent;
-        border-color: #BB2728;
+        border: 1px solid #BB2728;
         box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+
+        &:hover {
+            color: black;
+            background-color: white; 
+            border: 1px solid #BB2728;
+        };
     }
 `;

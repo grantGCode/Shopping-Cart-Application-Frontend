@@ -15,7 +15,7 @@ function ItemCard({item}) {
                     <h3 className="title">{prodRef.title}</h3>
                     <h5 className="quantity">{`x${item.quantity}`}</h5>
                 </div>
-                <button className="remove-button"
+                <button className="remove-button-item"
                     onClick={() => {cartContext.removeOneItem(item)}}
                 >
                     Remove
