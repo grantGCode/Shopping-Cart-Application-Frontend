@@ -5,7 +5,7 @@
 This is a online shopping cart application for customers to purchase one or multiple, of various the same products. 
 Offered by any online merchant who implements it into their website or online store. 
  
-The project was created with `React.JS` `Node & Express.JS` and styled with `styled-components`. The payment portal powered by custom API that connects to `Stripe` to enable secure payment processing for the customer.
+The project was created with `React.JS` `Node & Express.JS` and styled with `styled-components`. The payment is portal powered by custom API that connects to `Stripe` to enable secure payment processing for the customer.
 
 ## System Design for the Shopping Cart
 
