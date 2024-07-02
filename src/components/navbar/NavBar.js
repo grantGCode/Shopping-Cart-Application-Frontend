@@ -26,7 +26,7 @@ export default function NavBar() {
   /* Purchase Items Button on click function*/
   const buyCartContent = async () => {
     try {
-      const response = await fetch('https://us-shopper-94591f5ffa5c.herokuapp.com',{
+      const response = await fetch('https://sssc-backend-server-8f9102284d63.herokuapp.com/',{
         method: "POST",
         headers: {
           'Content-Type': 'application/json'
