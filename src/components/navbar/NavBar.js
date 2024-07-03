@@ -26,7 +26,7 @@ export default function NavBar() {
   /* Purchase Items Button on click function*/
   const buyCartContent = async () => {
     try {
-      const response = await fetch('https://sssc-backend-server-8f9102284d63.herokuapp.com/',{
+      const response = await fetch('https://sssc-backend-server-8f9102284d63.herokuapp.com',{
         method: "POST",
         headers: {
           'Content-Type': 'application/json'
@@ -46,7 +46,7 @@ export default function NavBar() {
       }
       //If const response should fail.
     } catch (error) {
-      toast.error('An unexpected error occurred:');
+      toast.error(`An unexpected error occurred on line 49: ${error}`);
       console.log(error);
     }
   };
