@@ -43,9 +43,7 @@ function App() {
                 </>
               }
             ></Route>  
-            <Route path='/success' element={
-              <Success />
-            }/>
+            <Route path='/success' element={<Success />}/>
             <Route path='/cancel' element={<Cancel />} />
           </Routes>
         </Router>
