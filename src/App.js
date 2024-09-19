@@ -8,10 +8,9 @@ import Cancel from './pages/Cancel.jsx'
 import Store from './pages/Store.jsx'
 import Success from './pages/Success.jsx'
 import Navbar from './components/navbar/NavBar.js'
+import Footer from './components/footer/Footer.js'
 
 import 'bootstrap/dist/css/bootstrap.min.css'
-
-const credits = 'Photos By: @ivanjevtic_, @frankyfloress, @aiony, @alireza.d.o';
 
 function App() {
   return (
@@ -26,24 +25,17 @@ function App() {
                 <>
                   <Navbar />
                   <Store />
-                  <div className='footer'>
-                    <div className='footer-position-container'>
-                      <div className='footer-container-1'>
-                        <h3 className='footer-title'>Pulchra Rosa</h3>
-                        <p className='footer-description'>{credits}</p>
-                      </div>
-                      <div className='footer-container-2'>
-                        <span className='footer-copyright'>© Copyright 2024 . Rights Reserved</span>
-                      </div>
-                      <div className='footer-container-3'>
-                        <img className='footer-logo' src='./images/footer-logo.svg' alt='footer-logo'></img>
-                      </div>
-                    </div>
-                  </div>
+                  <Footer />
                 </>
               }
             ></Route>  
-            <Route path='/success' element={<Success />}/>
+            <Route path='/success' 
+              element={
+                <>
+                  <Success />
+                  <Footer />
+                </>
+              }/>
             <Route path='/cancel' element={<Cancel />} />
           </Routes>
         </Router>
