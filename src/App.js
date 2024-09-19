@@ -36,7 +36,13 @@ function App() {
                   <Footer />
                 </>
               }/>
-            <Route path='/cancel' element={<Cancel />} />
+            <Route path='/cancel' 
+              element={
+                <>
+                  <Cancel />
+                  <Footer />
+                </>
+              }/>
           </Routes>
         </Router>
       <ToastContainer />
