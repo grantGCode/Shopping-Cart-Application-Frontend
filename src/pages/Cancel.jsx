@@ -1,23 +1,21 @@
-import { StoreStyledContainer} from '../styles/Store.styled.js'
-import { loremIpsum } from 'lorem-ipsum'
+import { CancelStyledContainer} from '../styles/Cancel.styled.js';
 
-const loremText = loremIpsum({
-  count: 2,
-  units: 'sentences',
-  format: 'plain',
-});
 function cancel() {
   return (
-    <StoreStyledContainer>
+    <CancelStyledContainer>
       <h2 className='header-two'>Your Order Has Been Canceled.<i className='skinny'>Thank You!</i>.</h2>
-      <p className='header-description'>{loremText}</p>
-      <button>Return To Store</button>
+      <p className='header-description'>
+        If you did not intend to cancel your order and 
+        are seeing this page <span className='red'> please </span> 
+        contact our team for help.
+      </p>
+      <button className='cta-button'>Return To Store</button>
       <div className="store-container">
         <div className='bottom-image-container'>
           <img alt='girl-alt-logo' src='./images/aiony-haust-cutout-mobile.png'></img>
         </div> 
       </div>
-    </StoreStyledContainer>
+    </CancelStyledContainer>
   )
 }
 
