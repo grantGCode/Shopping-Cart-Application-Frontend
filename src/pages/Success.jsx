@@ -4,8 +4,9 @@ import { SuccessStyledContainer} from '../styles/Success.styled.js';
 function success() {
   return (
     <SuccessStyledContainer>
-      <h2 className='header-two'>You're <span className='red'>All</span></h2> <h2 className='header-two'>Set!</h2>
-      <h2 className='header-two'><i className='skinny'>Thank You!</i>.</h2>
+      <h2 className='header-two'>You're <span className='red'>All</span></h2> 
+      <h2 className='header-two'>Set!</h2>
+      <h2 className='header-two'><i className='skinny'>Thank You!</i></h2>
       <p className='header-description'>
         Please be so kind enough to let us know what 
         you think once your new jacket arrives. 
