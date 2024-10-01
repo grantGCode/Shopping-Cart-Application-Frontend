@@ -4,6 +4,7 @@ import { SuccessStyledContainer} from '../styles/Success.styled.js';
 function success() {
   return (
     <SuccessStyledContainer>
+      <h1 className='header'>Pulchra Rosa</h1>
       <h2 className='header-two'>You're <span className='red'>All</span></h2> 
       <h2 className='header-two'>Set!</h2>
       <h2 className='header-two'><i className='skinny'>Thank You!</i></h2>

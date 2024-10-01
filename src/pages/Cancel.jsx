@@ -3,6 +3,7 @@ import { CancelStyledContainer} from '../styles/Cancel.styled.js';
 function cancel() {
   return (
     <CancelStyledContainer>
+      <h1 className='header'>Pulchra Rosa</h1>
       <h2 className='header-two'>Your Order Has Been Canceled.<i className='skinny'>Thank You!</i></h2>
       <p className='header-description'>
         If you did not intend to cancel your order and 
