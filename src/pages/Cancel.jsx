@@ -10,7 +10,9 @@ function cancel() {
         are seeing this page <span className='red'> please </span> 
         contact our team for help.
       </p>
-      <button className='cta-button'>Return To Store</button>
+      <div className='button-container'>
+        <button className='cta-button'>Return To Store</button>
+      </div>
       <div className="store-container">
         <div className='bottom-image-container'>
           <img alt='girl-alt-logo' src='./images/aiony-haust-cutout-mobile.png'></img>

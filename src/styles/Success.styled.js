@@ -80,7 +80,7 @@ export const SuccessStyledContainer = styled.div`
   
   .cta-button {
     font-weight: bold;
-    width: 112px;
+    width: 132px;
     height: 42px;
     background-color: #BB272B;
     color: white;

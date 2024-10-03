@@ -67,12 +67,12 @@ export const CancelStyledContainer = styled.div`
   .button-container {
     padding-top: 10px;
     display: flex;
-    justify-content: flex-start;
+    justify-content: center;
   }
   
   .cta-button {
     font-weight: bold;
-    width: 112px;
+    width: 132px;
     height: 42px;
     background-color: #BB272B;
     color: white;
