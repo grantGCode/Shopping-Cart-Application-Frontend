@@ -30,6 +30,7 @@ export const CancelStyledContainer = styled.div`
   }
 
   .header, .header-two, .header-description {
+    overflow: hidden;
     padding: 0 20px;
   }
 
@@ -90,24 +91,32 @@ export const CancelStyledContainer = styled.div`
     animation: ${moveBackground} 90s ease-in-out infinite;
     padding: 0px;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
 
     .top-image-container {
       display: block;
-    }
-
-    .header, .header-two, .header-description {
-      text-align: left;
-      padding: 5px;
-    }
-
-    .store-container {
-      max-width: 1280px;
       display: flex;
+      width: 40%;
+    }
+
+    .header, .header-two {
+      text-align: left;
+      overflow: hidden;
+    }
+
+    .header-description {
+      text-align: left;
+      overflow: hidden;
+      width: 55%;
+    }
+
+    .cancel-container {
+      max-width: 1280px;
+      margin-top: 5%;
+      margin-bottom: 15%;
     }
 
     .spot-light-container {
-      display: flex;
       justify-content: center;
       align-items: center;
       padding-right: 50px;
@@ -116,6 +125,13 @@ export const CancelStyledContainer = styled.div`
 
     .products-container {
       flex-direction: row;
+    }
+
+    .button-container {
+      justify-content: start;
+      margin-bottom: 16px;
+      padding-left: 20px;
+      padding-right: 20px;
     }
 
     .bottom-image-container{
