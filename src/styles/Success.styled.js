@@ -27,6 +27,7 @@ export const SuccessStyledContainer = styled.div`
   .header, .header-two {
     font-family: "Libre-Bold", sans-serif;
     text-align: center;
+    overflow-y: hidden;
   }
 
   .header, .header-two, .header-description {
@@ -75,7 +76,7 @@ export const SuccessStyledContainer = styled.div`
   .button-container {
     padding-top: 10px;
     display: flex;
-    justify-content: flex-start;
+    justify-content: center;
   }
   
   .cta-button {
@@ -98,10 +99,12 @@ export const SuccessStyledContainer = styled.div`
     animation: ${moveBackground} 90s ease-in-out infinite;
     padding: 0px;
     display: flex;
-    justify-content: center;
+    justify-content: start;
 
     .top-image-container {
       display: block;
+      display: flex;
+      width: 40%;
     }
 
     .header, .header-two, .header-description {
@@ -109,22 +112,26 @@ export const SuccessStyledContainer = styled.div`
       padding: 5px;
     }
 
-    .store-container {
+    .success-container {
       max-width: 1280px;
       display: flex;
     }
 
     .spot-light-container {
-      display: flex;
       justify-content: center;
       align-items: center;
+      margin-top: 20%;
+      margin-bottom: 50%;
       padding-right: 50px;
-      width: 25%;
     }
 
     .products-container {
       flex-direction: row;
     }
+
+    .button-container {
+    justify-content: start;
+  }
 
     .bottom-image-container{
       display: none;
