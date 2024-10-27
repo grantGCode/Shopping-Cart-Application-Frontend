@@ -69,6 +69,7 @@ export const CancelStyledContainer = styled.div`
     padding-top: 10px;
     display: flex;
     justify-content: center;
+    text-decoration: none;
   }
   
   .cta-button {
@@ -107,7 +108,7 @@ export const CancelStyledContainer = styled.div`
     .header-description {
       text-align: left;
       overflow: hidden;
-      width: 55%;
+      width: 75%;
     }
 
     .cancel-container {

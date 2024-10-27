@@ -1,4 +1,5 @@
 import { CancelStyledContainer} from '../styles/Cancel.styled.js';
+import { Link } from 'react-router-dom';
 
 function cancel() {
   return (
@@ -16,9 +17,9 @@ function cancel() {
           are seeing this page <span className='red'> please </span> 
           contact our team for help.
         </p>
-        <div className='button-container'>
+        <Link className='button-container' to='/'>
           <button className='cta-button'>Return To Store</button>
-        </div>
+        </Link>
       </div>
       <div className="cancel-container">
         <div className='bottom-image-container'>

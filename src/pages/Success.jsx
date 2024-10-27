@@ -1,5 +1,5 @@
 import { SuccessStyledContainer} from '../styles/Success.styled.js';
-
+import { Link } from 'react-router-dom';
 
 function success() {
   return (
@@ -26,9 +26,9 @@ function success() {
             <p className='header-description'>
               We Appreciate Your Feedback!
             </p>
-            <div className='button-container'>
+            <Link className='button-container' to='/'>
               <button className='cta-button'>Return To Store</button>
-            </div>
+            </Link>
           </div>
         <div className="store-container">
           <div className='bottom-image-container'>

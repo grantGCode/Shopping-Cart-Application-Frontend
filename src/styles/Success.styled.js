@@ -77,6 +77,7 @@ export const SuccessStyledContainer = styled.div`
     padding-top: 10px;
     display: flex;
     justify-content: center;
+    text-decoration: none;
   }
   
   .cta-button {
